@@ -3,7 +3,7 @@ env:
   global:
   - GH_USER: nelson
 node_js:
-- '0.10'
+- '0.12.0'
 install:
 - npm install jshint mocha gulp bower -g 
 - npm install
@@ -19,4 +19,4 @@ install:
 - git commit -m "Deployed to Github Pages"
 - git push -f --quiet origin master:gh-pages
 - cd ..
-script: npm run-script deploy
+# script: npm run-script deploy
