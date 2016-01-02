@@ -4,7 +4,6 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-import connect from 'gulp-connect-php';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -164,20 +163,4 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
-});
-
-gulp.task('php', function() {
-  connect.server({
-    ini : '/Users/niusen/project/m/php.ini',
-    base : 'dist',
-    port : '8001'
-  }, function (){
-    browserSync({
-      proxy: 'localhost:8001'
-    });
-  });
- 
-  gulp.watch('**/*.php').on('change', function () {
-    browserSync.reload();
-  });
 });
