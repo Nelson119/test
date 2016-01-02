@@ -1,0 +1,1 @@
+"use strict";$(document).on("ready",function(){$("#input-24").fileinput({overwriteInitial:!1,maxFileSize:2e5,initialCaption:"選擇影片"})});
