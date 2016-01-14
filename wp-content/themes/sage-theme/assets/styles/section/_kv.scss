@@ -1,0 +1,157 @@
+#kv{
+  max-height: 666px;
+  overflow: hidden;
+  position: fixed;
+  padding: 0;
+  max-width:100%;
+  top:0;
+  z-index: 21;
+  @media screen and (max-width: 1170px) {
+    display: none;
+  }
+  &.pinned{
+    position: absolute;
+    top:616px;
+  }
+  .slick-slider{
+    max-height: 100%;
+  }
+  .slick-slide{
+    position:relative;
+    &:after{
+      transition-duration:0.15s;
+      display: block;
+      width:100%;
+      height:100%;
+      left:0;
+      top:0;
+      background:rgba(0,0,0,0.5);
+      content:' ';
+      position: absolute;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  .slick-dots{
+    bottom:50px;
+    display: none !important;
+  }
+  .slick-active{
+    position:relative;
+    &:after{
+      opacity: 0;
+      transition-duration:0.25s;
+    }
+  }
+  .slick-arrow{
+    position:absolute;
+    width:25px;
+    height:45px;
+    z-index: 1;
+    top:300px;
+    &:hover{
+      filter:invert(0.15);
+    }
+    &:before{
+      display: none;
+    }
+  }
+  .slick-prev{
+    left:30px;
+    background:url(../images/kv/arrow-prev.png);
+  }
+  .slick-next{
+    right:30px;
+    background:url(../images/kv/arrow-next.png) no-repeat;
+  }
+}
+
+#kvm{
+  overflow: hidden;
+  z-index: 20;
+  margin-top:96px;
+  @media screen and (max-width: 768px) {
+    margin-top:50px;
+  }
+  @media screen and (min-width: 1170px) {
+    display: none;
+  }
+  li{
+    // max-width: 100%;
+    // width:100%;
+      display: block;
+    a{
+      display: block;
+      img{
+        max-width: 100%;
+        width:100%;
+      }
+    }
+  }
+  .slick-dots{
+    bottom:10%;
+    position:absolute;
+    display: inline-block;
+    letter-spacing: 1em;
+    li{
+      display: inline-block;
+      &.slick-active{
+        button:before{
+          opacity: 0.95;
+          background:#fff;
+        }
+      }
+      button:before{
+        border: 2px solid #fff;
+        border-radius: 50%;
+        color: black;
+        content: " ";
+        font-family: "slick";
+        font-size: 6px;
+        height: 15px;
+        width: 15px;
+        left: 0;
+        opacity: 0.65;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        &:hover{
+          opacity: 0.75;
+          background:#fff;
+        }
+      }
+
+    }
+  }
+  ul{
+    margin-bottom:0;
+  }
+}
+
+#kv ~ header{
+  height:128px;
+  margin-top:602px;
+    a.logo{
+      height: 50px;
+      &:before{
+        display: none;
+      }
+      #logo{
+        margin:1px 0 0;
+        height: 50px;
+      }
+    }
+  @media screen and (max-width: 1170px) {
+    margin-top:0;
+    height:30px;
+  }
+}
+#kv ~ header .fit .logo{
+  opacity: 0;
+}
+#kv ~ header .marquee{
+  @media screen and (max-width: 1170px) {
+    margin-top:0;
+  }
+}
