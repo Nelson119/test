@@ -31,7 +31,7 @@
               <s class="bottom"></s>
               <s class="left"></s>
               <s class="right"></s>
-              <a class="thumb" href="interview.html"><img src="<?php echo $thumbnail?>"><i></i></a>
+              <a class="thumb" href="<?php echo get_the_permalink()?>"><img src="<?php echo $thumbnail?>"><i></i></a>
               <h5><?php the_title()?></h5>
               <i></i>
               <p><?php echo $summary?></p>

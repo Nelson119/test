@@ -58,26 +58,23 @@
           </article>
           <aside class="side col-lg-3 col-md-12 col-sm-12 col-xs-12 pull-right text-left">
             <section class="row">
+                <?php 
+                    $cfs = CFS();
+                    $side = $cfs->get('side');
+                    if(count($side)) {
+                      foreach ($side as $s) {
+                        ?>
               <div class="vendor-about">
                 <hr>
-                <span class="tagline">ABOUT US</span>
-                <img class="logo" src="<?php echo $theme_path?>images/vendors/vendor-logo.png">
-                <hr>
-                <p class="description text-left">我們希望，每位新娘都能擁有一輩子的夢想．ＷＨＩＴＥ手工婚紗秉持優質的服務．ＷＨＩＴＥ手工婚紗秉持優質的服務．每位新娘都能擁有一輩子的夢想．ＷＨＩＴＥ手工婚紗秉持優質的服務</p>
-                <hr>
-                <span class="tagline">ABOUT US</span>
-                <p class="detail text-left">營業時間 13:00 ~ 21:00</p>
-                <p class="detail text-left">休假時間  週日休</p>
-                <p class="detail text-left">高級手工婚紗出租服務，預約制。</p>
-                <p class="detail text-left">聯絡電話： 0978-833-511</p>
-                <p class="detail text-left"><a href="http://whitestudio.pixnet.net/blog">網址：http://whitestudio.pixnet.net/blog</a>
-                <p class="detail text-left">地址：大安區和平東路二段257號7樓</p>
-              <div class="box text-center">
-                <span class="tagline">ABOUT US</span>
-                <hr>
-                <p>你沒看錯，White3週年了！！<br>
-在這特別的時刻，感謝大家對於我們的支持，我們推出有史以來最優惠的活動，即日起全館全館6 5折起﹒非常謝謝這一年來大家給了我在這特別的時刻，感謝大家對於我們的支持，我們推出有史以來最優惠的活動，即日起全館全館6 5折起﹒非常謝謝這一年來大家給了我們很多鼓勵與建議，讓我們能持續的進步。</p>
+                <span class="tagline"><?php echo $s['headline'] ?></span>
+                <img class="logo" src="<?php echo $s['image']?>">
+                <p class="description text-left"><?php echo $s['content']?></p>
               </div>
+
+                      <?php 
+                      }
+                    }
+                ?>
             </section>
           </aside>
         </section>

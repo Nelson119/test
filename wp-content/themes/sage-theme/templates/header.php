@@ -46,8 +46,24 @@
           <ul class="cd-words-wrapper waiting">
             <li><span>// </span></li>
             <li>
-              
-              <a href="javascript:" class="is-visible">每次都帶給人耳目一新還記得她在春夏的超大膽系列嗎？</a><a href="javascript:">剛剛看到一個FB新書廣告，有人讀過這位作者的書嗎？這本書能買否？</a><a href="javascript:">喝下這口咖啡的瞬間，腦內啡大量分泌，自然就覺得這咖啡好棒棒啊</a>
+              <?php 
+                $wp_query =  new WP_Query( array( 'pagename' => 'home' ) );
+
+                if ($wp_query->have_posts()) : $wp_query->the_post();
+                  $cfs = CFS();
+                  $marquees = $cfs->get('marquee');
+                  if(count($marquees)) {
+                    $first = true;
+                    foreach ($marquees as $mq) {
+                      ?><a  <?php if($first) echo 'class="is-visible" '?>target="_blank" href="<?php echo $mq['link']?>"><?php echo $mq['text']?></a>
+                    <?php 
+                      $first = false;
+                    }
+
+                  }
+                endif;
+                wp_reset_query();
+              ?>
             </li>
             <li><span>//</span></li>
           </ul>
