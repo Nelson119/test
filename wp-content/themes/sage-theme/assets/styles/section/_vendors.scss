@@ -9,12 +9,51 @@
         @media screen and (max-width: 1170px) {
             padding:0;
         }
+        ul.slides{
+            li{
+                position:relative;
+                figure{
+                    width:100%;
+                    height: 0;
+                    padding-top:percentage(390/580);
+                    background: #0a0a0a center center/100% auto no-repeat;
+                    overflow: hidden;
+                    &.portrait{
+                        background-size:auto 100%;
+                    }
+                    img{
+                        opacity: 0;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
     .slides{
         display: inline;
     }
     .slide-thumb{
         padding:0;
+        li{
+            position:relative;
+            figure{
+                width:100%;
+                height: 0;
+                padding-top:100%;
+                background: transparent center center/cover no-repeat;
+                overflow: hidden;
+                img{
+                    opacity: 0;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width: 100%;
+                }
+            }
+        }
     }
     @media screen and (max-width: 1170px) {
         .main-content{
@@ -34,8 +73,8 @@
     ol{
         margin:0;
         position: relative;
-        margin-left:-5px;
-        margin-right:-5px;
+        // margin-left:-5px;
+        // margin-right:-5px;
         @media screen and (max-width: 1170px) {
             margin:0;
         }
@@ -64,7 +103,12 @@
         height:30px;
         z-index: 1;
         top:50%;
-        margin-top:-15px;
+        margin-top:0;
+        @media screen and (max-width: 1170px) {
+            top:0;
+            height: auto;
+            display: none!important;
+        }
         &:hover{
           filter:invert(0.15);
         }

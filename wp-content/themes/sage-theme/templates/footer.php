@@ -7,16 +7,16 @@
       <a class="logo" href="./"><img class="svg" alt="" src="<?php echo $theme_path?>images/common/logo.svg"></a>
       <p>&copy; COPYRIGHT BY GET MARRY唯婚誌2015.</p>
       <ol>
-        <li><a href="http://instagram.com" target="_blank" ><i class="fa fa-instagram"></i></a></li>
-        <li><a href="http://facebook.com" target="_blank" ><i class="fa fa-facebook"></i></a></li>
-        <li><a href="http://pinsterest.com" target="_blank" ><i class="fa fa-pinterest"></i></a>
+        <li><a href="javascript:" target="_blank" ><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/whitebridaldress/" target="_blank" ><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.pinterest.com/getmarry/" target="_blank" ><i class="fa fa-pinterest"></i></a>
       </ol>
       <ul>
-        <li><a href="about.html" title="關於我們"></a></li>
-        <li><a href="vendor-list.html" title="合作廠商"></a></li>
-        <li><a href="javascript:" title="免責聲名"></a></li>
-        <li><a href="javascript:" title="隱私權政策"></a></li>
-        <li><a href="javascript:" title="公司介紹"></a></li>
+        <li><a href="<?php echo get_site_url()?>/關於我們" title="關於我們"></a></li>
+        <li><a href="<?php echo get_site_url()?>/免責聲明" title="免責聲明"></a></li>
+        <li><a href="<?php echo get_site_url()?>/隱私權政策" title="隱私權政策"></a></li>
+        <li><a href="<?php echo get_site_url()?>/廣告合作" title="廣告合作"></a></li>
+        <li><a href="<?php echo get_site_url()?>/聯絡方式" title="聯絡方式"></a></li>
       </ul>
     </aside>
   </section>

@@ -31,6 +31,21 @@
     }
     img{
       max-width: 100%;
+      height:677px;
+    }
+    img.layer-2{
+      max-width: 100%;
+      position:absolute;
+      opacity: 0;
+      top:0;
+      left:0;
+    }
+    &.slick-current {
+      overflow: hidden;
+      img.layer-2{
+        opacity: 1;
+        transition: 2s ease-in-out 0.35s;
+      }
     }
   }
   .slick-dots{
@@ -41,6 +56,7 @@
     position:relative;
     &:after{
       opacity: 0;
+      display: none;
       transition-duration:0.25s;
     }
   }
@@ -71,8 +87,8 @@
   overflow: hidden;
   z-index: 20;
   margin-top:96px;
-  @media screen and (max-width: 768px) {
-    margin-top:50px;
+  @media screen and (max-width: 767px) {
+    margin-top:40px;
   }
   @media screen and (min-width: 1170px) {
     display: none;
@@ -83,14 +99,29 @@
       display: block;
     a{
       display: block;
+      position:relative;
       img{
         max-width: 100%;
         width:100%;
       }
     }
+    img.layer-2{
+      max-width: 100%;
+      position:absolute;
+      opacity: 0;
+      top:0;
+      left:0;
+    }
+    &.slick-current {
+      overflow: hidden;
+      img.layer-2{
+        opacity: 1;
+        transition: 4s ease-in-out 0.35s;
+      }
+    }
   }
   .slick-dots{
-    bottom:10%;
+    bottom:7%;
     position:absolute;
     display: inline-block;
     letter-spacing: 1em;
@@ -109,8 +140,8 @@
         content: " ";
         font-family: "slick";
         font-size: 6px;
-        height: 15px;
-        width: 15px;
+        height: 10px;
+        width: 10px;
         left: 0;
         opacity: 0.65;
         position: absolute;

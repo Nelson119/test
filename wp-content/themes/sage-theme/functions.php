@@ -154,24 +154,27 @@ function html5wp_pagination() {
     $paged = (get_query_var('paged') !== 0) ? get_query_var('paged') : 1;
     $pages = paginate_links( array(
         'base'      =>  @add_query_arg('page','%#%'),
-        'format'    => '?page=%#%',
+        'format'    => '?paged=%#%',
         'current'   => $paged,
         'total'     => $wp_query->max_num_pages,
         'type'      => 'array',
         'prev_next' => true,
-        'prev_text' => __('&lt;PREV'),
-        'next_text' => __('NEXT&gt;'),
+        'prev_text' => __('<img src="/wp-content/themes/sage-theme/dist/images/common/prev.png">'),
+        'next_text' => __('<img src="/wp-content/themes/sage-theme/dist/images/common/next.png">'),
     ) );
     if( is_array( $pages ) ) {
         $i = 0;
+        echo "<li><a href=\"?paged=1\" class=\"first page-numbers\"><img src=\"/wp-content/themes/sage-theme/dist/images/common/dual-prev.png\"></a></li>"; 
         foreach ( $pages as $page ) {
-          $active = '';
-          if($i == $paged){
-            $active = ' class="active"';
-          }
-          echo "<li".$active.">$page</li>";
-          $i++;
+            $active = '';
+            if($i == $paged){
+                $active = ' class="active"';
+            }
+            echo "<li".$active.">$page</li>"; 
+            $i++;
         }
+        $i--;
+        echo "<li><a href=\"?paged=$i\" class=\"first page-numbers\"><img src=\"/wp-content/themes/sage-theme/dist/images/common/dual-next.png\"></a></li>";
     }
 }
 function html5wp_index($length){return 20;}         // 首頁文章摘要 html5wp_excerpt('html5wp_index');
@@ -254,7 +257,7 @@ add_action( 'login_head', 'new_login_logo' );
 function new_login_logo() {
      echo '<style type="text/css">
               .login h1 a {
-                 background-image:url('.get_template_directory_uri().'/img/common/login-logo.png) !important;
+                 background-image:url('.get_template_directory_uri().'/dist/images/common/login-logo.png) !important;
                  background-size: 270px 164px !important;
                  width:270px !important;
                  height:164px !important;
@@ -406,3 +409,208 @@ function remove_admin_bar_links() {
     $wp_admin_bar->remove_menu('new-content');      // Remove the content link
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+
+
+// function to display number of posts.
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0";
+    }
+    return $count;
+}
+
+// function to count views.
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+
+// Add it to a column in WP-Admin
+add_filter('manage_posts_columns', 'posts_column_views');
+add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+function posts_column_views($defaults){
+    $defaults['post_views'] = __('Views');
+    return $defaults;
+}
+function posts_custom_column_views($column_name, $id){
+    if($column_name === 'post_views'){
+        echo getPostViews(get_the_ID());
+    }
+}
+/**
+ * Add prev and next links to a numbered page link list
+ */
+function wp_link_pages_args_prevnext_add($args)
+{
+    global $page, $numpages, $more, $pagenow;
+
+    if (!$args['next_or_number'] == 'next_and_number') 
+        return $args; # exit early
+
+    $args['next_or_number'] = 'number'; # keep numbering for the main part
+    if (!$more)
+        return $args; # exit early
+
+    if($page-1) # there is a previous page
+        $args['before'] .= _wp_link_page($page-1)
+            . $args['link_before']. $args['previouspagelink'] . $args['link_after'] . '</a>'
+        ;
+
+    if ($page<$numpages) # there is a next page
+        $args['after'] = _wp_link_page($page+1)
+            . $args['link_before'] . ' ' . $args['nextpagelink'] . $args['link_after'] . '</a>'
+            . $args['after']
+        ;
+
+    return $args;
+}
+add_filter('wp_link_pages_args', 'wp_link_pages_args_prevnext_add');
+
+ /* Add Next Page Button in First Row */
+add_filter( 'mce_buttons', 'my_add_next_page_button', 1, 2 ); // 1st row
+ 
+/**
+ * Add Next Page/Page Break Button
+ * in WordPress Visual Editor
+ * 
+ * @link https://shellcreeper.com/?p=889
+ */
+function my_add_next_page_button( $buttons, $id ){
+ 
+    /* only add this for content editor */
+    if ( 'content' != $id )
+        return $buttons;
+ 
+    /* add next page after more tag button */
+    array_splice( $buttons, 13, 0, 'wp_page' );
+ 
+    return $buttons;
+}
+
+function alter_query_so_15250127($qry) {
+    if(is_admin()){
+        return;
+    }
+    $tax = get_query_var( 'taxonomy' );
+    $posttype = $qry->query_vars['post_type'];
+    $cpt = is_post_type_archive( array('interview' ,'report' ,'customs' ,'inspired' ,'event') );
+    if ( $qry->is_main_query() && $cpt) {
+        $list_exclude = array();
+        if($tax == '' || $tax == null){
+            $hot_args =  array(
+                array(
+                    'taxonomy'  => '置頂項目',
+                    'field'     => 'slug',
+                    'terms'     => 'hot',
+                )
+            );
+            $highlight_args =  array(
+                array(
+                    'taxonomy'  => '置頂項目',
+                    'field'     => 'slug',
+                    'terms'     => 'highlight',
+                )
+            );
+            $select_args =  array(
+                array(
+                    'taxonomy'  => '置頂項目',
+                    'field'     => 'slug',
+                    'terms'     => 'select',
+                )
+            );
+        }else{
+            $hot_args =  array(
+                array(
+                    'taxonomy'  => '置頂項目',
+                    'field'     => 'slug',
+                    'terms'     => 'hot',
+                ),
+                array(
+                    'taxonomy'  => $tax,
+                    'field'     => 'slug',
+                    'terms'     => $term->name
+                )
+            );
+            $highlight_args =  array(
+                array(
+                    'taxonomy'  => '置頂項目',
+                    'field'     => 'slug',
+                    'terms'     => 'highlight',
+                ),
+                array(
+                    'taxonomy'  => $tax,
+                    'field'     => 'slug',
+                    'terms'     => $term->name
+                )
+            );
+            $select_args =  array(
+                array(
+                    'taxonomy'  => '置頂項目',
+                    'field'     => 'slug',
+                    'terms'     => 'select',
+                ),
+                array(
+                    'taxonomy'  => $tax,
+                    'field'     => 'slug',
+                    'terms'     => $term->name
+                )
+            );
+        }
+        $hot = new WP_Query (array (
+            'post_type' => $posttype,
+            'tax_query' => $hot_args,
+            'posts_per_page' => 1,
+            'orderby' => 'date',
+            'order' => 'desc',
+            'paged' => 1
+        ));
+        $highlight = new WP_Query (array (
+            'post_type' => $posttype,
+            'tax_query' => $highlight_args,
+            'posts_per_page' => 1,
+            'orderby' => 'date',
+            'order' => 'desc',
+            'paged' => 1
+        ));
+        $select = new WP_Query (array (
+            'post_type' => $posttype,
+            'tax_query' => $select_args,
+            'posts_per_page' => 1,
+            'orderby' => 'date',
+            'order' => 'desc',
+            'paged' => 1
+        ));
+
+        if ($highlight->have_posts()) : $highlight->the_post();
+            array_push($list_exclude,get_the_id());
+        endif;
+        if ($select->have_posts()) : $select->the_post();
+            array_push($list_exclude,get_the_id());
+        endif;
+        if ($hot->have_posts()) : $hot->the_post();
+            array_push($list_exclude,get_the_id());
+        endif;
+        // print_r( wp_count_posts($posttype););
+        $qry->set('post__not_in', $list_exclude);
+        $qry->set('orderby', 'date');
+        $qry->set('order', 'desc');
+        $qry->set('posts_per_page', 6);
+    }
+
+}
+add_action('pre_get_posts','alter_query_so_15250127');
+

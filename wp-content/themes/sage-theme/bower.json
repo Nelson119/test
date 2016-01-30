@@ -5,7 +5,7 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
     "blueimp-gallery": "~2.16.0",
-    "lodash": "~3.10.1",
+    "lodash": "~4.0.1",
     "font-awesome": "~4.4.0",
     "superfish": "~1.7.6",
     "slick-carousel": "~1.5.8",
@@ -42,6 +42,27 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "blueimp-gallery": {
+      "main": [
+        "css/blueimp-gallery.css",
+        "css/blueimp-gallery-indicator.css",
+        "css/blueimp-gallery-video.css",
+        "img/error.png",
+        "img/error.svg",
+        "img/loading.gif",
+        "img/play-pause.png",
+        "img/play-pause.svg",
+        "img/video-play.png",
+        "img/video-play.svg",
+        "js/blueimp-helper.js",
+        "js/blueimp-gallery.js",
+        "js/blueimp-gallery-fullscreen.js",
+        "js/blueimp-gallery-indicator.js",
+        "js/blueimp-gallery-video.js",
+        "js/blueimp-gallery-vimeo.js",
+        "js/blueimp-gallery-youtube.js"
       ]
     }
   },

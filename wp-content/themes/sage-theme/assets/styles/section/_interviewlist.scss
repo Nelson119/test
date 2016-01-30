@@ -1,3 +1,4 @@
+
 .page.interview-list{
 	min-height:600px;
     h2{
@@ -20,9 +21,6 @@
         // margin-top:40px;
         ul{
             margin-top:0;
-        }
-        h5{
-            text-align: center;
         }
     }
     .pre{
@@ -106,6 +104,20 @@
             position:relative;
             a{
                 position:relative;
+                width:100%;
+                height:0;
+                padding-top:percentage(127/189);
+                background: transparent center center/cover no-repeat;
+                span{
+                    position:absolute;
+                    bottom:0;
+                    margin-bottom: 0.7em;
+                    color:#fff;
+                    text-shadow: 0 0 3px #000;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
                 &:before{
                     content:'READ MORE';
                     position:absolute;
@@ -164,7 +176,17 @@
                 }
                 display: block;
                 img{
+                    position:absolute;
+                    top:0;
+                    left:0;
                     width:100%;
+                }
+            }
+
+            &:nth-child(3){
+
+                @media screen and (max-width: 1170px) {
+                    display: none;
                 }
             }
         }

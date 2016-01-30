@@ -91,6 +91,9 @@ body{
       height:150px;
     }
     li {
+      &.ib-added {
+        display: none;
+      }
       &:before{
         transition: height 0.5s ease-out 0s;
       }
@@ -240,7 +243,7 @@ body{
         }
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       height:40px;
       left:50%;
       margin-left:-60px;
@@ -359,13 +362,10 @@ body{
 }
 header {
   height:293px;
-  @media screen and (max-width: 1170px) {
-    height:auto;
-  }
   margin-top:0;
   background:#fff;
   @media screen and (max-width: 1170px) {
-    margin-top:0;
+    height:0;
     #menu{
       display: none;
     }
@@ -444,14 +444,14 @@ header {
     background: #000;
     height:78px;
     @media screen and (max-width: 1170px) {
-      height:15px;
+      height:30px;
       background: rgba(0,0,0,0);
       .marquee{
         margin-top:96px;
       }
     }
     @media screen and (max-width: 767px) {
-      height:15px;
+      height:30px;
       .marquee{
         margin-top:40px;
       }
@@ -493,7 +493,7 @@ header {
             }
           }
         }
-        &:hover,&.active{
+        &:hover,&:nth-child(1) ~.active{
           color:#000;
           background:#fff;
           transition-duration: 0.55s;
@@ -668,7 +668,6 @@ header {
     background: rgba(255,255,255,0.7);
     // background: #FFF;
     text-align: center;
-    padding:5px 0 22px;
     height:35px;
     .cd-headline {
       max-height: 35px;
@@ -679,7 +678,7 @@ header {
     }
     ul{
       display: inline-block;
-      height: 20px;
+      line-height: 30px;
       letter-spacing: 0;
       font-size: 12px;
       &:after{
@@ -687,12 +686,19 @@ header {
         height:18px;
       }
       li{
-        color:#e74b8c;
+        color:#ffb6ba;
         letter-spacing: 0.1em;
         a{
           vertical-align: top;
-          color:#e74b8c;
+          color:#ffb6ba;
           font-size: percentage(13/12);
+            height: 100%;
+          &:before {
+            content: " ";
+            display: inline-block;
+            height: 100%;
+            vertical-align: top;
+          }
         }
         &:hover{
           span{
@@ -702,7 +708,7 @@ header {
         }
         span{
           font-family: FontAwesome;
-          color:#e74b8c;
+          color:#ffb6ba;
           display: inline-block;
           vertical-align: top;
           font-size: percentage(11/14);
@@ -726,7 +732,7 @@ header {
       }
     }
     a{
-      color:#e74b8c;
+      color:#ffb6ba;
     }
   }
   .overlay{

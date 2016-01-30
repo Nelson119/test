@@ -12,10 +12,11 @@
       ],
       "main": true
     },
-    "customizer.js": {
+    "mdzr.js": {
       "files": [
-        "scripts/customizer.js"
-      ]
+        "bower_components/modernizr/modernizr.js"
+      ],
+      "main": true
     }
   },
   "config": {

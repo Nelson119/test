@@ -4,7 +4,7 @@
   .reports{
     h3{
       b{
-        background-image:url(../images/common/reports.svg);
+        background-image:url(../images/common/report.svg);
       }
     }
     ul{
@@ -13,6 +13,11 @@
         padding-top:0;
         &:before{
           top:2em;
+        }
+        h5{
+          @media screen and (max-width: 767px) {
+            width:100%;
+          }
         }
       }
     }
@@ -45,10 +50,12 @@
       margin-bottom:30px;
     }
   }
-  .creativity{
+  .inspired{
     h3{
+      font-size: 40px;
       b{
-        background-image:url(../images/common/creativity.svg);
+        text-transform: uppercase;
+        background-image:url(../images/common/inspired.svg);
       }
     }
   }
@@ -62,7 +69,7 @@
       margin:0;
     }
 	}
-  .interview,.customs,.creativity,.reports{
+  .interview,.customs,.inspired,.reports{
     ul{
       li{
           @media screen and (max-width: 1170px) {
@@ -104,27 +111,37 @@
     li{
   		position: relative;
   		display: block;
+      width:132px !important;
+      height:132px !important;
   		a{
-  			width:132px;
-  			height:132px;
+  			width:100%;
   			position: relative;
   			overflow:hidden;
   			display: block;
+        height:100%;
+        line-height: 132px;
+        background: transparent center center/ cover no-repeat;
 
-  			&:before{
-  				content:attr(title);
-  				position:absolute;
-  				text-align: center;
-  				margin-top: 45px;
-  				font-family: nav;
-  				padding: 0 2px;
-  				color:#fff;
-  				z-index: 1;
-  				opacity: 0;
-  				transition-duration: 0.5s;
-  				transform: scale(0.95) translateY(-400%);
+  			span{
+          position: relative;
+          color: #fff;
+          display: inline-block;
+          font-family: nav;
+          line-height: 1.4em;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+          z-index: 1;
+          opacity: 0;
+          transition-duration: 0.5s;
+          transform: scale(0.95) translateY(-50em);
+          // width:101%;
+          // line-height:0;
+          // height:0;
+          // padding-top:50%;
+          // top:0;
   			}
-  			&:hover:before{
+  			&:hover span{
   				opacity: inherit;
   				transition-property: transform;
   				transform: none;
@@ -209,6 +226,10 @@
       	content: "";
       }
       // background:url(../images/kv/arrow-next.png) no-repeat;
+    }
+    .slick-track{
+      height:132px;
+      overflow: hidden;
     }
   }
 }

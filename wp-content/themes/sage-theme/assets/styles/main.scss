@@ -237,3 +237,16 @@ body {
   }
 
 }
+
+
+.post-type-archive-event .page{
+  @media screen and (max-width: 767px) {
+    margin-top:30px;
+  }
+}
+div.wpcf7-mail-sent-ok,div.wpcf7-response-output{
+  border-width: 0 0 2px;
+}
+span.wpcf7-not-valid-tip{
+  float: left;
+}

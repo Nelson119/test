@@ -79,6 +79,23 @@ class IB_Generator {
 				$label    = ( isset( $pto->label ) && $pto->label != '') ? $pto->label : $pto->labels->menu_name;
 				$crumbs[] = array( 'url' => $url, 'text' => self::strip( $label ) );
 			}
+
+			/// term link add by nelson 20160125
+			$obj = get_post_type_object( get_post_type() );
+			if($obj->labels->name !== '頁面'):
+				$terms = wp_get_post_terms($post->ID, $obj->labels->name, array("fields" => "all"));
+				if($terms):
+					foreach($terms as $term) :
+						$url = get_term_link( $term );
+						$label    = $term->name;
+						$crumbs[] = array( 
+							'url' => $url, 
+							'text' => self::strip( $label ), 
+							'xclass' => array( 'menu-item-term' ));
+		          	endforeach;
+				endif;
+			endif;
+			///--
 	
 			// use ancestry if it has some
 			$ancestors = get_post_ancestors( $post );
@@ -143,7 +160,35 @@ class IB_Generator {
 			$crumbs[] = array( 'url' => $url, 'text' => self::strip( $label ) );
 		} elseif ( is_category() || is_tag() || is_tax() ) {
 			// add the page itself with a suitable name
+			/// post type archive link add by nelson 20160125
 			$term = $this->queried_object;
+			$label = $this->queried_object->taxonomy;
+			switch($label){
+				case '人物專訪':
+					$posttype = 'interview';
+					break;
+				case '禮俗教室':
+					$posttype = 'customs';
+					break;
+				case '專題報導':
+					$posttype = 'report';
+					break;
+				case '婚禮創意':
+					$posttype = 'creativity';
+					break;
+				case '廠商資訊':
+					$posttype = 'vendor';
+					break;
+				case '精選活動':
+					$posttype = 'event';
+					break;
+			}
+			$url = get_site_url().'/'. $posttype;
+			
+			if ( $url ) {
+				$crumbs[] = array( 'url' => $url, 'text' => self::strip( $label ) );
+			}
+			///--
 			// it might have a hierarchy
 			$terms = self::term_hierarchy( $term );
 			foreach ( $terms as $term ) {
@@ -178,6 +223,7 @@ class IB_Generator {
 			// catchall, but I don't know what to call this page
 			$crumbs[] = array( 'url' => $currentUrl, 'text' => IB_Options::safe_string( 'current' ) );
 		}
+		 wp_reset_query();
 		return $crumbs;
 	}
 }

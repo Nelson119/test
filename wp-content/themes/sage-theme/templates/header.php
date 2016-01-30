@@ -4,19 +4,27 @@
 <section class="mmenu-head">
   <aside>
     <a id="mm" href="javascript:"><i class="fa fa-bars"></i></a>
-    <a class="logo" href="./"><img class="svg" alt="" src="<?php echo $theme_path?>images/common/logo.svg"></a>
+    <a class="logo" href="<?php echo get_site_url()?>"><img class="svg" alt="" src="<?php echo $theme_path?>images/common/logo.svg"></a>
     <a class="search" href="javascript:"><img src="<?php echo $theme_path?>images/common/search.svg"></a>
   </aside>
-  <form role="search" action="/search.html" method="get" class="search_form" id="search_form">
+  <form role="search" action="<?php echo get_site_url()?>" method="get" class="search_form" id="search_form">
     <input type="search" placeholder="Search" name="s" class="search_inp">
     <input type="submit" role="button" class="search_sub mover"></form>
+    
 </section>
 <?php if( is_front_page()):?>
 <section id="kv" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
   <ul class="">
-    <li><a href="javascript:"><img src="<?php echo $theme_path?>images/kv/banner1.png"></a></li>
-    <li><a href="javascript:"><img src="<?php echo $theme_path?>images/kv/banner1.png"></a></li>
-    <li><a href="javascript:"><img src="<?php echo $theme_path?>images/kv/banner1.png"></a></li>
+    <?php 
+      $cfs = CFS();
+      $pictures = $cfs->get('loop');
+      if(count($pictures)) {
+        foreach ($pictures as $picture) {
+          ?>
+            <li><a target="_blank" href="<?php echo $picture['link']?>"><img src="<?php echo $picture['image']?>"><img class="layer-2" src="<?php echo $picture['headline']?>"></a></li>
+        <?php }
+
+      }?>
   </ul>
 </section>
 <?php endif ?>
@@ -27,19 +35,25 @@
       <nav id="menu">
         <?php html5blank_nav(); ?>
         <ul class="social">
-          <li class="no-child"><a target="_blank" href="http://instagram.com"><img src="<?php echo $theme_path?>images/common/ig.svg"></a></li>
-          <li class="no-child"><a target="_blank" href="http://facebook.com"><img src="<?php echo $theme_path?>images/common/fb.svg"></a></li>
-          <li class="no-child"><a target="_blank" href="http://pinterest.com"><img src="<?php echo $theme_path?>images/common/p.svg"></a>
+          <li class="no-child"><a target="_blank" href="javascript:"><img src="<?php echo $theme_path?>images/common/ig.svg"></a></li>
+          <li class="no-child"><a target="_blank" href="https://www.facebook.com/whitebridaldress/"><img src="<?php echo $theme_path?>images/common/fb.svg"></a></li>
+          <li class="no-child"><a target="_blank" href="https://www.pinterest.com/getmarry/"><img src="<?php echo $theme_path?>images/common/p.svg"></a>
           </li>
-          <li class="search"><a href="javascript:"><img src="<?php echo $theme_path?>images/common/search.svg"></a>
-            <div>
-              <section class="center">
-                <i class="fa fa-search"></i><input name="search-term" placeholder="Search anytime by typing">
-              </section>
-            </div>
+          <li class="search">
+            <a href="javascript:"><img src="<?php echo $theme_path?>images/common/search.svg"></a>
+            <form action="<?php echo get_site_url()?>" class="search-form" method="get" role="search">
+              <div>
+                <section class="center">
+                  <i class="fa fa-search"></i><input placeholder="Search anytime by typing" name="s">
+                </section>
+              </div>
+            </form>
           </li>
         </ul>
       </nav>
+      <?php 
+        $posttype = get_post_type();
+      if($posttype != 'event' && !is_404() && have_posts()):?>
       <section class="marquee">
 
         <div class="container cd-headline letters type">
@@ -69,6 +83,7 @@
           </ul>
         </div>
       </section>
+      <?php endif?>
       <section class="overlay"></section>
     </aside>
   </section>
