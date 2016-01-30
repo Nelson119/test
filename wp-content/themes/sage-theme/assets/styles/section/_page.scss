@@ -613,7 +613,7 @@
   					width:100%;
   					height:100%;
   					display: block;
-  					background:$main-active-color;
+  					background:#ffb6ba;
   				}
   				&.top,&.bottom,&.left,&.right{
   					position:absolute;
@@ -992,13 +992,13 @@
 			z-index: 0;
 		}
 		&:hover {
-		    background:$main-active-color;
+		    background:#ffb6ba;
 		    color:#fff;
-		    border-color:$main-active-color;
+		    border-color:#ffb6ba;
 		  	transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1) ;
 		    &:after {
 				left: 120%;
-				background:$main-active-color;
+				background:#ffb6ba;
 				opacity: 0.2;
 				transition: left 750ms cubic-bezier(0.19, 1, 0.22, 1) 0.25s,
 				opacity 1s ease-in .9s,
