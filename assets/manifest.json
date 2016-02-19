@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "modernizr.js": {
+      "files": [
+        "scripts/modernizr.js"
+      ],
+      "main": true
+    }
+  },
+  "config": {
+    "devUrl": "http://localhost:8080/"
+  }
+}

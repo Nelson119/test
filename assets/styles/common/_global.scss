@@ -1,0 +1,54 @@
+body{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga";
+	font-style: normal;
+	text-rendering: optimizelegibility;
+	font-family: $main-font,cursive;
+	font-size: $base-font-size;
+	letter-spacing:1px;
+	word-spacing:1px;
+	min-width:320px;
+	overflow-x:hidden;
+	color:$main-text-color;
+	::selection,::-moz-selection {
+		background:rgba(0,0,0,0.05);
+		color:inherit;
+	}
+	ul,ol{
+		padding:0;
+		margin:0;
+		list-style: none;
+	}
+	.nav > li > a:focus, .nav > li > a:hover{
+		background: rgba(0,0,0,0);
+	}
+	button,a,input,select{
+		color:$main-text-color;
+		transition-duration: 0.15s;
+		&:focus, &:hover{
+			color:inherit;
+			transition-duration: 0.25s;
+			outline:0;
+			background: inherit;
+			text-decoration: none;
+			img{
+				border:0;
+			}
+		}
+		img{
+			border:0;
+		}
+	}
+}
+html{
+	min-width: 320px;
+	.container{
+		min-width: 320px;
+	}
+	&.ie,&.firefox.windows{
+		body{
+			font-family: $main-font-fallback;
+		}
+	}
+}
