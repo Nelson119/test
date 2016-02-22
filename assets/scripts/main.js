@@ -155,7 +155,7 @@
           $('.member-list').append($('.member-list li.leaders').clone()); 
         }
         //--
-        var joinus = $('.member-list li.joinus').clone();
+        var joinus = $('.member-list li.joinus').clone().first();
         $('.member-list li.joinus').remove();
         var leaders = $('.member-list li.leaders');
         var members = $('.member-list li:not(.leaders)');
