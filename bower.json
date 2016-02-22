@@ -15,7 +15,8 @@
     "lodash": "^4.2.1",
     "gsap": "^1.18.2",
     "font-awesome": "^4.5.0",
-    "isotope": "^2.2.2"
+    "isotope": "^2.2.2",
+    "lightgallery": "^1.2.14"
   },
   "overrides": {
     "jquery.easing": {
@@ -45,7 +46,9 @@
       ]
     },
     "isotope": {
-      "main": ["./dist/isotope.pkgd.min.js"],
+      "main": [
+        "./dist/isotope.pkgd.min.js"
+      ],
       "dependencies": {}
     },
     "bootstrap-sass": {

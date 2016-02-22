@@ -43,218 +43,52 @@
 				<h2>TEDxChungChengU 團隊</h2>
 				<ul class="member-list row">
 					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="col-lg-2">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾</h3><h4> Xu, Jia-Ling</h4>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
+						<a href="javascript:">
+							<section class="range">
+								<aside class="title">
+									<setion class="title-container">
+										<h3>許家綾</h3>
+										<h4> Xu, Jia-Ling</h4>
+										<h5>Co-Curator</h5>
+									</setion>
+								</aside>
+								<aside class="info">
+									<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
+								</aside>
+							</section>
+							<figure style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)"></figure>
+							<svg viewBox="0 0 15 15">
+								<rect x="0" y="6.4" width="15" height="2.1"/>
+								<polygon points="8.6,0 6.4,0 6.4,6.4 0,6.4 0,8.6 6.4,8.6 6.4,15 8.6,15 8.6,8.6 15,8.6 15,6.4 8.6,6.4 "/>
+							</svg>
 						</a>
 					</li>
 					<li class="leaders col-lg-4">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾 Xu, Jia-Ling</h3>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
+						<a href="javascript:">
+							<section class="range">
+								<aside class="title">
+									<setion class="title-container">
+										<h3>許家綾</h3>
+										<h4> Xu, Jia-Ling</h4>
+										<h5>Co-Curator</h5>
+									</setion>
+								</aside>
+								<aside class="info">
+									<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
+								</aside>
+							</section>
+							<figure style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
+
+							</figure>
+							<svg viewBox="0 0 15 15">
+								<rect x="0" y="6.4" width="15" height="2.1"/>
+								<polygon points="8.6,0 6.4,0 6.4,6.4 0,6.4 0,8.6 6.4,8.6 6.4,15 8.6,15 8.6,8.6 15,8.6 15,6.4 8.6,6.4 "/>
+							</svg>
 						</a>
 					</li>
-					<li class="leaders col-lg-4">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾 Xu, Jia-Ling</h3>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="leaders col-lg-4">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾 Xu, Jia-Ling</h3>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="leaders col-lg-4">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾 Xu, Jia-Ling</h3>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
-						</a>
-					</li>
-					<li class="leaders col-lg-4">
-						<a href="javascript:" style="background-image:url(<?php theme_asset('images/about/member-1.png')?>)">
-							<aside class="info">
-								<h3>許家綾 Xu, Jia-Ling</h3>
-								<h5>Co-Curator</h5>
-								<p>思考理性，生活感性的中文人。習慣用文學做為觀察生活的媒介。習慣透過寫作找回與自己的連結。習慣忙碌與日常共存的生活。習慣為一件事情全心投入。習慣對一個習慣自我批判並且循環的過程。</p>
-							</aside>
+					<li class="col-lg-2 joinus">
+						<a href="javascript:">
+							JOIN US NOW
 						</a>
 					</li>
 				</ul>

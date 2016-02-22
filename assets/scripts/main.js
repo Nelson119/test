@@ -36,7 +36,7 @@
       },
       finalize: function() {
         // console.log($.easing.easeOutQuart);
-        var animations = ['jello','wobble','tada','swing','swing','shake','rubberBand','pulse','bounce'];
+        var animations = ['jello','wobble','tada','swing','shake','rubberBand','pulse','bounce'];
         var animateIcons = $('.main-grid svg');
         var lastIcon = null;
 
@@ -147,7 +147,16 @@
         // JavaScript to be fired on the home page
       },
       finalize: function() {
-        // console.log($.easing.easeOutQuart);
+        // fake 20 time;
+        for(var i=0;i<6; i++){
+          $('.member-list').append($('.member-list li:not(.leaders)').clone()); 
+        }
+        for(var i=0;i<2; i++){
+          $('.member-list').append($('.member-list li.leaders').clone()); 
+        }
+        //--
+        var joinus = $('.member-list li.joinus').clone();
+        $('.member-list li.joinus').remove();
         var leaders = $('.member-list li.leaders');
         var members = $('.member-list li:not(.leaders)');
         var memberArr = [];
@@ -172,10 +181,12 @@
               }
               cursor++;
             }
+            // square.append(joinus);
             $('.member-list').append(conatiner);
-            conatiner.isotope({ layoutMode: 'masonry' });
-          }
-          else{
+            if(insertTo !== 0){
+              conatiner.isotope({ layoutMode: 'masonry' });
+            }
+          }else{
             var square = $('<aside></aside>').addClass('col-lg-6');
             var total = 6;
             var indexOfLeader = Math.floor(Math.random() * 5 + 2);
@@ -193,7 +204,54 @@
             }
           }
         });
-        // $('.member-list').isotope({ layoutMode: 'masonry' });
+        conatiner = $('<aside></aside>').addClass('col-lg-12');
+        while(memberArr.length){
+          conatiner.append( memberArr.pop());
+        }
+        if(leaders.length % 2 === 0){
+          conatiner.append(joinus);
+        }
+        $('.member-list').append(conatiner);
+        $('.member-list a').on('click', function(ev){
+          var o = this;
+          var info = $(o).parents('li');
+
+          $('li.flip').not(info).removeClass('flip');
+          var classes = [];
+          classes.push('flip');
+          if(!info.hasClass('flip')){
+            if(!info.hasClass('leaders')){
+              info.removeClass('right');
+              info.removeClass('left');
+              info.removeClass('bottom');
+              info.removeClass('top');
+              if(ev.clientX > $(window).width() / 2){
+                classes.push('right');
+              }else{
+                classes.push('left');
+              }
+              var isTopRow = Math.round(Math.abs($(o).offset().top - $('.member-list').offset().top)) === 3;
+              var isBottomRow = Math.round(Math.abs($(o).offset().top - $('.member-list').offset().top))
+                === $('.member-list').outerHeight() - $(o).outerHeight() - 3;
+              if(isTopRow){
+                classes.push('top');
+              }
+              else if(isBottomRow){
+                classes.push('bottom');
+              }
+              else if(ev.clientY > $(window).height() / 2){
+                classes.push('bottom');
+              }else{
+                classes.push('top');
+              }
+            }
+            for(var i in classes){
+              info.addClass(classes[i]);
+            }
+          }else{
+            info.removeClass('flip');
+          }
+        });
         // JavaScript to be fired on the home page, after the init JS
       }
     }
