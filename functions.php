@@ -377,7 +377,7 @@ remove_filter('term_description','wpautop');
 function change_post_menu_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = '專欄';
+    $menu[5][0] = '來點專欄';
     $submenu['edit.php'][5][0] = '專欄';
     $submenu['edit.php'][10][0] = '新增專欄';
     $submenu['edit.php'][15][0] = '專欄分類'; // Change name for categories

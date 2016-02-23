@@ -40,6 +40,7 @@ body{
 			border:0;
 		}
 	}
+	background-color: #f3f3f3;
 }
 html{
 	min-width: 320px;
@@ -49,6 +50,16 @@ html{
 	&.ie,&.firefox.windows{
 		body{
 			font-family: $main-font-fallback;
+		}
+	}
+}
+
+body{
+	.wrap.container{
+		width: 100%;
+		main{
+			padding:0;
+			width:100%;
 		}
 	}
 }
