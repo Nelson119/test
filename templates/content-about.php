@@ -87,9 +87,11 @@
 						</a>
 					</li>
 					<li class="col-lg-2 joinus">
-						<a href="javascript:">
-							JOIN US NOW
-						</a>
+						<aside>
+							<a href="javascript:">
+								<span>JOIN US NOW</span>								
+							</a>
+						</aside>
 					</li>
 				</ul>
 			</section>		
