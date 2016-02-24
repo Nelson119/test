@@ -81,6 +81,7 @@ footer{
 			z-index: 1;
 		}
 	  	@media screen and (max-width: 767px) {
+	  		display: none;
 	  		position: absolute;
 			width:55vw;
 			letter-spacing: -1em;

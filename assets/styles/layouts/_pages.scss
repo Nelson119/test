@@ -19,9 +19,6 @@
 		filter:url('data:image\/svg+xml;utf9,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"6\" \/><\/filter><\/svg>#blur');
 		-webkit-filter:blur(6px);
 	}
-	a{
-		&:hover{ color:#d22614 }
-	}
 }
 
 @import "layouts/home";

@@ -16,7 +16,8 @@
     "gsap": "^1.18.2",
     "font-awesome": "^4.5.0",
     "isotope": "^2.2.2",
-    "lightgallery": "^1.2.14"
+    "lightgallery": "^1.2.14",
+    "jquery-colorbox": "colorbox#^1.6.3"
   },
   "overrides": {
     "jquery.easing": {
@@ -33,6 +34,11 @@
         "./slick/fonts/slick.svg",
         "./slick/fonts/slick.ttf",
         "./slick/fonts/slick.woff"
+      ]
+    },
+    "jquery-colorbox": {
+      "main": [
+        "./jquery.colorbox.js"
       ]
     },
     "font-awesome": {

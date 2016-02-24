@@ -269,7 +269,15 @@
         // });
         $('.kv .background ul').slick({ dots: false, arrows: false, fade:true, speed: 800 });
         $('.kv nav ul').slick({ asNavFor: '.kv .background ul', dots: true, fade:true, speed: 800 });
-        
+        $('.taxonomy').on('click', function(){
+          if($(window).width() < 1170){
+            $(this).toggleClass('on');
+          }else{
+            $(this).removeClass('on');
+          }
+        });
+        $('.post-type-archive-columns .container figure a').attr('href','javascript:');
+        $('.post-type-archive-videos .container figure a').colorbox({iframe:true, innerWidth:800, innerHeight:540});
         // $('.kv nav ul').on('afterChange', function(){
         //   var fade = $('.kv .fade').attr('style', $('.kv').attr('style')).addClass('in');
         //   var src = $('.kv nav ul li.slick-current').attr('data-background-image');
@@ -282,6 +290,49 @@
         // });
         $('.more a').on('click', function(){
           $('.hide').first().addClass('fade in').removeClass('hide');
+        });
+        // $('.post-type-archive-videos figure a');
+      }
+    },
+    'single': {
+      init: function() {
+        // JavaScript to be fired on the home page
+      },
+      finalize: function() {
+        $('.kv.columns ul').slick({ dots: true, arrows: false, fade:true, speed: 800 });
+        $('.kv.videos a').colorbox({iframe:true, innerWidth:800, innerHeight:540});
+        $('.share').on('click', function(){
+          $(this).parent().toggleClass('on');
+        });
+
+        $('.post-type-archive-videos figure a').on('click', function(e){
+          e.preventDefault();
+          console.log(e);
+          var data = [];
+          data.push({
+              src: 'https://www.youtube.com/watch?v=meBbDqAXago'
+          });
+          $(window).lightGallery({
+            thumbnail: true,
+            dynamic: true,
+            dynamicEl: data,
+            loadYoutubeThumbnail: true,
+            loadVimeoThumbnail: true,
+            youtubeThumbSize: 'maxresdefault',
+            youtubePlayerParams: {
+                modestbranding: 1,
+                showinfo: 0,
+                rel: 0,
+                controls: 0
+            },
+            vimeoPlayerParams: {
+                byline: 0,
+                portrait: 0,
+                color: 'fe805b'
+            },
+            videoMaxWidth: 800
+          }); 
+          return false;
         });
       }
     }
