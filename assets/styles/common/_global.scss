@@ -55,7 +55,9 @@ html{
 }
 
 body{
+	min-width: 320px;
 	.wrap.container{
+		min-width: 320px;
 		width: 100%;
 		main{
 			padding:0;

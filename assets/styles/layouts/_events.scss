@@ -1,4 +1,5 @@
 .post-type-archive-events {
+	min-width: 320px;
 	.taxonomy{
 		margin:40px auto 30px;
 		width:100%;
@@ -83,6 +84,20 @@
 		    position: relative;
 		    line-height: percentage(43/30);
 		}
+		.link{
+			img, svg{
+				width: 20px;
+				margin: 0 auto;
+			}
+			position: absolute;
+			bottom:25px;
+			right:25px;
+			svg{
+				path{
+					fill:$main-red;
+				}
+			}
+		}
 		.cd-timeline{
 			padding-top:20px;
 			margin:0 -15px 0;
@@ -96,25 +111,31 @@
 				width: 1px;
 				margin-left:-0.5px;
 			}
+			&+.cd-timeline .year{
+				margin-top:40px;
+			}
 		}
 		.cd-timeline-block{
-			margin:0 0 380px;
 			height: 0;
-			&:nth-child(3){
+			&:nth-child(n){
 				margin-bottom:200px;
 			}
 			&:nth-child(2n){
+				margin:0 0 380px;
 				.cd-timeline-content{
 					&:before{
 						left: -21px;
 					}
 				}
 			}
+			&:last-child{
+				margin-bottom:435px;
+			}
 		}
 		.cd-timeline-content{
 			background: rgba(0,0,0,0);
 			box-shadow: none;
-			width: 560px;
+			width: percentage(560/1170);
 			height: 460px;
 			padding:0;
 			&:before{
@@ -137,20 +158,49 @@
 			article{
 				position: relative;
 				background-position: $main-red;
-				margin:-70px 40px 0;
-				padding:55px 30px 15px 70px;
+				margin:-70px percentage(40/560) 0;
+				width: percentage(480/560);
+				height: 200px;
 				background: #fff;
-				color: $main-red;
+				color:#404040;
+				font-size: percentage(14/14);
 
-				p{
-					font-size: percentage(18/13);
+				span.active{
+					color: $main-red;
+					font-size: percentage(18/14);
+				}
+				span.past{
+					font-size: percentage(14/14);
 				}
 				h3{
-					color:#404040;
-					font-size: percentage(22/13);
+					font-size: percentage(22/14);
 				}
 				.category{
-					font-size: percentage(14/13);
+					color: $main-red;
+					font-size: percentage(14/14);
+					svg{
+						path{
+							fill:$main-red;
+						}
+					}
+				}
+				.normal, .hover{
+					padding:30px 50px 50px 50px;
+					background-color: #fff;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top:0;
+					left:0;
+				}
+				.hover{
+					background-color: rgba(210, 38, 30, 0.9);
+					color:#fff;
+				}
+				.link{
+					position: absolute;
+					bottom:25px;
+					right:25px;
 					svg{
 						path{
 							fill:$main-red;
@@ -158,6 +208,34 @@
 					}
 				}
 
+			}
+			&:hover{
+			  	@media screen and (min-width: 1170px) {
+					figure{
+						filter:url('data:image\/svg+xml;utf9,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"6\" \/><\/filter><\/svg>#blur');
+						-webkit-filter:blur(6px);
+					}
+					article{
+						.normal{
+							opacity: 0;
+							height:0;
+							overflow: hidden;
+							transition:0.35s opacity 0s,0s height 0.35s;
+							transition-duration:0.35s;
+						}
+						.link{
+							background: rgba(0,0,0,0);
+							svg{
+								path{
+									fill:#fff;
+								}
+							}
+						}
+						.date{
+							opacity:0;
+						} 
+					}
+				}
 			}
 			.date{
 				position: absolute;
@@ -301,6 +379,112 @@
 				}
 			}
 		}
+
+		.container{
+			.cd-timeline::before {
+				left: -1px;
+				margin-left: 50%;
+			}
+			.cd-timeline-img{
+				display: none;
+			}
+			.cd-timeline-content{
+				background: rgba(0,0,0,0);
+				box-shadow: none;
+				width: vw320(300) !important;
+				margin:0 auto;
+				padding:0;
+				&:before{
+				    display: none;
+				}
+				figure{
+					width: vw320(300);
+					height: vw320(200);
+				}
+				article{
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+					height: vw320(155);
+					.normal{
+						padding:vw320(40) vw320(10) vw320(15);
+						height: auto;
+					}
+					.category{
+						font-size:vw320(12);
+					}
+					h3{
+						font-size:vw320(16);
+						margin:vw320(10) 0 vw320(40);
+					}
+					.active{
+						font-size:vw320(14);
+					}
+					.past{
+						font-size:vw320(12)!important;
+					}
+					.date{
+						width: vw320(50);
+						height: vw320(50);
+						font-size:vw320(11);
+					}
+					.day{
+						font-size:vw320(22);
+					}
+				}
+				&:hover{
+				  	@media screen and (min-width: 1170px) {
+						figure{
+							filter:url('data:image\/svg+xml;utf9,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"6\" \/><\/filter><\/svg>#blur');
+							-webkit-filter:blur(6px);
+						}
+						article{
+							.normal{
+								opacity: 0;
+								height:0;
+								overflow: hidden;
+								transition:0.35s opacity 0s,0s height 0.35s;
+								transition-duration:0.35s;
+							}
+							.link{
+								background: rgba(0,0,0,0);
+								svg{
+									path{
+										fill:#fff;
+									}
+								}
+							}
+							.date{
+								opacity:0;
+							} 
+						}
+					}
+				}
+				.date{
+					position: absolute;
+					top:0;
+					right:0;
+					width: 70px;
+					height: 70px;
+					color: #fff;
+					background: $main-red;
+					font-size: percentage(14/13);
+					text-align: center;
+					line-height: 1;
+					.day{
+						font-size: percentage(30/13);
+					}
+				} 
+				&:first-child{
+					margin-top:0;
+				}
+			}
+			.cd-timeline-block{
+				height: 0;
+				margin-bottom: vw320(335) !important;
+			}
+		}
+
 	}
   	@media (min-width: 768px) and (max-width: 1170px) {
   		.kv{
@@ -320,7 +504,7 @@
 				top:0;
 				height: 100%;
 				color:#fff;
-				content:'聽場演講';
+				content:'參加活動';
 				letter-spacing: 1px;
 				transform: none;
 				background: none;
@@ -396,6 +580,48 @@
 						transform:translateY(-600%) translateZ(-1px);
 					}
 				}
+			}
+		}
+		.container{
+			.cd-timeline-img{
+				left: 50%;
+			}
+			.cd-timeline-block{
+				&:nth-child(2n) .cd-timeline-content{
+					float: right;
+				}
+				&:nth-child(n){
+					margin-bottom:200px;
+				}
+				&:nth-child(2n){
+					margin:0 0 380px;
+					.cd-timeline-content{
+						&:before{
+							left: -21px;
+						}
+					}
+				}
+				&:last-child{
+					margin-bottom:435px;
+				}
+			}
+			.cd-timeline-block{
+				height: 0;
+				margin-bottom: vw768(315) !important;
+			}
+			.cd-timeline-content{
+				background: rgba(0,0,0,0);
+				box-shadow: none;
+				margin-left: 0;
+				width: vw768(330) !important;
+				figure{
+					width: vw768(336);
+					height: vw768(200);
+				}
+			}
+			.cd-timeline::before {
+				left: -1px;
+				margin-left: 50%;
 			}
 		}
 	} 
