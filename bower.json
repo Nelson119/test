@@ -16,8 +16,9 @@
     "gsap": "^1.18.2",
     "font-awesome": "^4.5.0",
     "isotope": "^2.2.2",
-    "lightgallery": "^1.2.14",
-    "jquery-colorbox": "colorbox#^1.6.3"
+    "vertical-timeline": "^0.0.1",
+    "bourbon": "^4.2.6",
+    "lightgallery": "^1.2.14"
   },
   "overrides": {
     "jquery.easing": {
@@ -36,9 +37,21 @@
         "./slick/fonts/slick.woff"
       ]
     },
-    "jquery-colorbox": {
+    "lightgallery":{
       "main": [
-        "./jquery.colorbox.js"
+        "dist/js/lightgallery-all.js",
+        "dist/css/*",
+        "dist/fonts/*",
+        "dist/img/*"
+      ]
+    },
+    "vertical-timeline": {
+      "main": [
+        "./js/main.js",
+        "./css/style.css",
+        "./img/cd-icon-location.svg",
+        "./img/cd-icon-movie.svg",
+        "./img/cd-icon-picture.svg"
       ]
     },
     "font-awesome": {

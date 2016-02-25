@@ -62,42 +62,9 @@ body{
 			width:100%;
 		}
 	}
-	#cboxOverlay{
-		background-color: #000;
+	#lg-video-cont {
+		padding:95px 75px 180px;
 	}
-	#colorbox {
-	    background: #fff;
-	}
-	#cboxContent {
-	    background: #fff;
-	    margin-top: 95px;
-	    margin-left: 75px;
-	    margin-right: 75px;
-	    margin-bottom: 180px;
-	}
-	#cboxTitle{
-	    color: #404040;
-	    background-color: #ddd;
-	    display: block;
-	    float: right;
-	    margin-top: 40px;
-	    position: relative;
-	    z-index: 1;
-	    padding: 10px;
-	}
-	#cboxClose{
-		background-image: url("../images/common/close.svg");
-		background-size: 27px auto;
-		height: 27px;
-		width: 27px;
-		background-position: 0 0;
-		right: -65px;
-		top: -85px;
-		&:hover{
-			background-position: 0 0;
-		}
-	}
-
 }
 
 $browser-xs-viewport: 320; // Default

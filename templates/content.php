@@ -100,7 +100,7 @@
 			<?php while($i--):?>
 			<section class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<figure>
-					<a href="https://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent&autoplay=1" title="TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entert-
+					<a href="<?php echo $link?>" title="TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entert-
 ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richard Wurman 在加州創立，原本只是一群朋友間的腦力
 大激盪，他們來自不同的領域，他們有些是建築師、科學家、教育家、詩人、劇作家、創業家、設計師等等。他們對未來充
 滿熱情，又有一些叛逆，聚在一起討論最新最酷的點子，和如何可以改變這個世界。" style="background-image: url(<?php theme_asset('images/videos/thumb.png')?>)"></a>
@@ -161,7 +161,7 @@ ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richar
 					<?php while($i--):?>
 					<section class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<figure>
-							<a href="https://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent&autoplay=1" title="TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entert-
+							<a href="<?php echo $link?>" title="TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entert-
 ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richard Wurman 在加州創立，原本只是一群朋友間的腦力
 大激盪，他們來自不同的領域，他們有些是建築師、科學家、教育家、詩人、劇作家、創業家、設計師等等。他們對未來充
 滿熱情，又有一些叛逆，聚在一起討論最新最酷的點子，和如何可以改變這個世界。" style="background-image: url(<?php theme_asset('images/videos/thumb.png')?>)"></a>

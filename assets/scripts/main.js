@@ -151,7 +151,7 @@
         for(var i=0;i<6; i++){
           $('.member-list').append($('.member-list li:not(.leaders)').clone()); 
         }
-        for(var i=0;i<2; i++){
+        for(var j=0;j<2; j++){
           $('.member-list').append($('.member-list li.leaders').clone()); 
         }
         //--
@@ -276,22 +276,9 @@
             $(this).removeClass('on');
           }
         });
-        $('.post-type-archive-columns .container figure a').attr('href','javascript:');
-        $('.post-type-archive-videos .container figure a').colorbox({iframe:true, innerWidth:800, innerHeight:540});
-        // $('.kv nav ul').on('afterChange', function(){
-        //   var fade = $('.kv .fade').attr('style', $('.kv').attr('style')).addClass('in');
-        //   var src = $('.kv nav ul li.slick-current').attr('data-background-image');
-        //   var img = new Image();
-        //   img.onload = function(){
-        //     $('.kv').css('background-image', 'url('+src+')');
-        //     $('.kv .fade').removeClass('in');
-        //   };
-        //   img.src = src;
-        // });
         $('.more a').on('click', function(){
           $('.hide').first().addClass('fade in').removeClass('hide');
         });
-        // $('.post-type-archive-videos figure a');
       }
     },
     'single': {
@@ -300,17 +287,18 @@
       },
       finalize: function() {
         $('.kv.columns ul').slick({ dots: true, arrows: false, fade:true, speed: 800 });
-        $('.kv.videos a').colorbox({iframe:true, innerWidth:800, innerHeight:540});
+        // $('.kv.videos a').colorbox({iframe:true, innerWidth:800, innerHeight:540});
+
         $('.share').on('click', function(){
           $(this).parent().toggleClass('on');
         });
 
-        $('.post-type-archive-videos figure a').on('click', function(e){
+        $('.single-videos .kv.videos a').unbind('click').on('click', function(e){
           e.preventDefault();
           console.log(e);
           var data = [];
           data.push({
-              src: 'https://www.youtube.com/watch?v=meBbDqAXago'
+              src: 'https://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent&autoplay=1'
           });
           $(window).lightGallery({
             thumbnail: true,
