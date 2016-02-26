@@ -9,10 +9,10 @@
       </ul>
     </figure>
     <figure class="kv videos" style="background-image: url(<?php theme_asset('images/videos/kv-2.png')?>)">
-      <a href="https://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent&autoplay=1" title="TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entert-
+      <a target="_blank" href="https://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent&amp;autoplay=1" data-sub-html="<div class='text'><h4>What’s TED?</h4><p>TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entert-
 ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richard Wurman 在加州創立，原本只是一群朋友間的腦力
 大激盪，他們來自不同的領域，他們有些是建築師、科學家、教育家、詩人、劇作家、創業家、設計師等等。他們對未來充
-滿熱情，又有一些叛逆，聚在一起討論最新最酷的點子，和如何可以改變這個世界。"></a>
+滿熱情，又有一些叛逆，聚在一起討論最新最酷的點子，和如何可以改變這個世界。</p></div>"></a>
     </figure>
     <section class="container">
       <section class="row">
@@ -75,6 +75,17 @@ ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richar
 
         <aside class="col-lg-3 col-md-3 col-sm-3 w280">
           <aside class="pull">
+            <section class="info visible-xs">
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+            </section>
             <figure class="profile-picture" style="background-image: url(<?php theme_asset('images/videos/profile.png')?>)"></figure>
             <section class="row">
               <aside class="col-lg-9 col-md-9 col-sm-9 col-xs-10 name">
@@ -102,7 +113,15 @@ ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richar
               </nav>
             </section>
             <section ></section>
-            <section class="info">
+            <section class="info hidden-xs">
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+              以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
+
               以「登山故事館」作為基地，致力於登山教育與登山文化的傳承及推廣，期盼眾人重視台灣的山岳故事與文化。常身處大自然的他，將分享他如何藉由觀察，了解自身與環境的連結。
             </section>
             <section class="row">

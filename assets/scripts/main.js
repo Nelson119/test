@@ -293,16 +293,29 @@
           $(this).parent().toggleClass('on');
         });
 
+        $('.lg-backdrop,.lg-outer').remove();
         $('.single-videos .kv.videos a').unbind('click').on('click', function(e){
+          if($(window).width() < 768){
+            return true;
+          }
           e.preventDefault();
           console.log(e);
           var data = [];
           data.push({
-              src: 'https://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent&autoplay=1'
+              src: $(this).attr('href'),
+              subHtml: $(this).attr('data-sub-html')
           });
+
           $(window).lightGallery({
             thumbnail: true,
             dynamic: true,
+            mode: 'lg-lollipop',
+            appendSubHtmlTo: '.lg-video',
+            fullScreen: false,
+            controls: false,
+            download: false,
+            counter: false,
+            zoom: false,
             dynamicEl: data,
             loadYoutubeThumbnail: true,
             loadVimeoThumbnail: true,
@@ -311,14 +324,14 @@
                 modestbranding: 1,
                 showinfo: 0,
                 rel: 0,
-                controls: 0
+                controls: 1
             },
             vimeoPlayerParams: {
                 byline: 0,
                 portrait: 0,
                 color: 'fe805b'
             },
-            videoMaxWidth: 800
+            videoMaxWidth: 950
           }); 
           return false;
         });

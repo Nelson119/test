@@ -2,6 +2,8 @@
 	.kv{
 		display: none;
 		height: 600px;
+		background-position: center;
+		background-size: cover;
 	  	@media (min-width: 768px) and (max-width: 1170px) {
 	  		height: vw768(360);
 		}
@@ -64,6 +66,10 @@
 					content:'';
 					top:0;
 					left:0;
+  					@media (min-width: 320px) and (max-width: 767px) {
+						background-size: 55px auto;
+						opacity:1;
+  					}
 				}
 				&:hover:after{
 					opacity:0.5;
@@ -101,6 +107,7 @@
 		.info{
 			vertical-align: middle;
 			letter-spacing: 10px;
+			position: relative;
 			span{
 				display: inline-block;
 				letter-spacing: 1px;
@@ -175,9 +182,16 @@
 			font-size:percentage(22/13);
 			padding:0.3em;
 
+			@media (min-width: 320px) and (max-width: 767px) {
+				font-size: vw320(14);
+			}
+
 			.title{
 				font-size:percentage(14/22);
 				display: block;
+				@media (min-width: 320px) and (max-width: 767px) {
+					font-size: vw320(12);
+				}
 			}
 
 			svg{
@@ -289,13 +303,15 @@
 		}
 		.banner{
 			img{
-				max-width:100%;
+				width:100%;
 			}
 		}
 	}
 
 	.fb-comments{
 	    padding: 30px 0px 30px 35px;
+	    display: block;
+    	max-width: 840px;
 	  	@media (min-width: 980px) and (max-width: 1200px) {
 	  		margin: 0 0 0 15px;
 		}
@@ -342,16 +358,22 @@
 			position: relative;
 		}
 		.info{
-			width: vw320(200);
-			height: vw320(100);
-			position: absolute;
-			top:0;
-			right: 0;
+		    height: auto;
+		    position: relative;	
+		    &:before{
+		    	float: left;
+		    	display: block;
+				width: vw320(100);
+				padding: vw320(80) 0 0;
+				content:'';
+		    }
 		}
 
 		.profile-picture{
 			width: vw320(100);
 			padding: vw320(100) 0 0;
+		    position: absolute;
+		    top:0;
 		}
 		.fb-comments{
 		    padding: 0;

@@ -1,3 +1,20 @@
+
+$browser-xs-viewport: 320; // Default
+$browser-sm-viewport: 768; // Default
+$browser-lg-viewport: 1170; // Default
+
+@function vw768($pixels, $context: $browser-sm-viewport) {
+  @return #{$pixels/$context*100}vw;
+}
+
+@function vw320($pixels, $context: $browser-xs-viewport) {
+  @return #{$pixels/$context*100}vw;
+}
+
+@function vw1170($pixels, $context: $browser-lg-viewport) {
+  @return #{$pixels/$context*100}vw;
+}
+
 body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -64,18 +81,65 @@ body{
 			width:100%;
 		}
 	}
-	#lg-video-cont {
-		padding:95px 75px 180px;
+	.lg-video-cont {
+		padding: 95px 75px 180px !important;
+		background: #fff;
+  		@media (min-width: 768px) and (max-width: 950px) {
+			padding: percentage(95/950) percentage(75/950) percentage(180/950) !important;
+  		}
 	}
-}
+	.lg-item {
+		h4{
+			color:$main-red;
+			font-size: pecentage(22/13);
+			width:800px;
+			margin: -655px auto 0;
+			text-align: left;
+			font-weight: bold;
+	  		@media (min-width: 768px) and (max-width: 950px) {
+	  			width: percentage(800/950);
+				margin: percentage(-655/950) auto 0;
+	  		}
+		}
+		p{
+			background: #ddd none repeat scroll 0 0;
+			color: #404040;
+			height: auto;
+			margin: 465px auto 0;
+			padding: 10px;
+			position: relative;
+			text-align: left;
+			white-space: normal;
+			width: 800px;
+	  		@media (min-width: 768px) and (max-width: 950px) {
+				width: percentage(800/950);
+				margin: percentage(465/950) auto 0;
+	  		}
+		}
+	}
+	.lg-backdrop.in{
+		opacity: 0.9;
+	}
+	.lg-toolbar {
+		background: rgba(0,0,0,0);
+		width:950px;
+		margin:-358px auto 0;
+		top:50%;
+		opacity: 1!important;
+		transform:none!important;
+		position: relative;
+  		@media (min-width: 768px) and (max-width: 950px) {
+  			width: 100%;
+			margin: percentage(-358/950) auto 0;
+  		}
 
-$browser-xs-viewport: 320; // Default
-$browser-sm-viewport: 768; // Default
 
-@function vw768($pixels, $context: $browser-sm-viewport) {
-  @return #{$pixels/$context*100}vw;
-}
-
-@function vw320($pixels, $context: $browser-xs-viewport) {
-  @return #{$pixels/$context*100}vw;
+		.lg-close{
+			font-size: percentage(45/13);
+			color:#404040;
+			&:hover{
+				color:#404040;
+			}
+		}
+	}
 }
