@@ -93,7 +93,7 @@ ainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richar
                   <svg viewBox="0 0 13 13">
                     <path d="M10.9,11.5L10.9,11.5h0.6c-0.2-2-1.6-3.6-3.5-4.1c1-0.5,1.6-1.5,1.6-2.7c0-1.7-1.4-3.1-3.2-3.1 c-1.7,0-3.2,1.4-3.2,3.1C3.3,5.8,4,6.8,5,7.4c-1.9,0.6-3.2,2.2-3.5,4.1h0.6h0.1"/>
                   </svg>邵定國
-                  <span class="title">登山故事館創辦人</sub>
+                  <span class="title">登山故事館創辦人</span>
                 </aside>
               </aside>
               <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-2">

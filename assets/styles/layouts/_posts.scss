@@ -736,8 +736,8 @@
 		main .container{
 			>.row{
 				>.col-lg-6, >.page >.col-lg-6{
-					figure{
-						a:after{
+					a{
+						figure:after{
 							background-image:url(../images/common/columns.svg);
 							background-size: 220px auto;
 						}

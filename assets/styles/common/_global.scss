@@ -23,8 +23,8 @@ body{
 	text-rendering: optimizelegibility;
 	font-family: $main-font,cursive;
 	font-size: $base-font-size;
-	letter-spacing:1px;
-	word-spacing:1px;
+	letter-spacing:0.5px;
+	word-spacing:0.5px;
 	min-width:320px;
 	overflow-x:hidden;
 	color:$main-text-color;
