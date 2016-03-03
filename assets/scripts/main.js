@@ -148,7 +148,7 @@
       },
       finalize: function() {
         // fake ;
-        for(var i=0;i<6; i++){
+        for(var i=0;i<5; i++){
           $('.member-list').append($('.member-list li:not(.leaders)').clone()); 
         }
         for(var j=0;j<2; j++){
@@ -157,106 +157,150 @@
         //--
         var joinus = $('.member-list li.joinus').clone().first();
         $('.member-list li.joinus').remove();
-        var leaders = $('.member-list li.leaders');
-        var members = $('.member-list li:not(.leaders)');
-        var memberArr = [];
-        members.each(function(i, member){
-          memberArr.push(member);
-        });
-        $('.member-list li').remove();
+        var leaders = $('.member-list li.leaders').clone();
+        var members = $('.member-list li:not(.leaders)').clone();
 
-        if($(window).width() >= 1170 ){
-          $.each(leaders, function(i, leader){
-            if(i === leaders.length-1 && leaders.length % 2 !== 0){
-              var conatiner = $('<aside></aside>').addClass('col-lg-12');
-              var insertTo = Math.floor(Math.random() * 5);
-              if(memberArr.length < 5){
-                insertTo = Math.floor(Math.random() * memberArr.length);
-              }
-              var cursor = 0;
-              while(memberArr.length){
-                if(insertTo === cursor){
-                  conatiner.append($(leader).clone());
-                }else{
-                  conatiner.append($(memberArr.pop()).clone());                
+        function renderList(){
+
+          var memberArr = [];
+          members.each(function(i, member){
+            memberArr.push($(member).clone());
+          });
+          console.log(memberArr);
+          if($(window).width() >= 1170 ){
+            if($('.member-list').hasClass('lg')){
+              return ;
+            }
+            $('.member-list >*').remove();
+            $.each(leaders, function(i, leader){
+              if(i === leaders.length-1 && leaders.length % 2 !== 0){
+                var conatiner = $('<aside></aside>').addClass('col-lg-12');
+                var insertTo = Math.floor(Math.random() * 5);
+                if(memberArr.length < 5){
+                  insertTo = Math.floor(Math.random() * memberArr.length);
                 }
-                cursor++;
+                var cursor = 0;
+                while(memberArr.length){
+                  if(insertTo === cursor){
+                    conatiner.append($(leader).clone());
+                  }else{
+                    conatiner.append($(memberArr.pop()).clone());                
+                  }
+                  cursor++;
+                }
+                conatiner.append(joinus.removeAttr('class').addClass('joinus col-lg-2 col-md-2'));
+                $('.member-list').append(conatiner);
+                if(insertTo !== 0){
+                  conatiner.isotope({ layoutMode: 'masonry' });
+                }
+              }else{
+                var square = $('<aside></aside>').addClass('col-lg-6 col-md-6');
+                var total = 6;
+                var indexOfLeader = Math.floor(Math.random() * 5 + 2);
+                while(total){
+                  if(indexOfLeader === total){
+                    square.append($(leader).clone().removeAttr('class').addClass('leaders col-lg-8 col-md-8'));
+                  }else{
+                    square.append($(memberArr.pop()).clone().removeAttr('class').addClass('col-lg-4 col-md-4'));
+                  }
+                  total--;
+                }
+                $('.member-list').append(square);
+                if(indexOfLeader < 6){
+                  square.isotope({ layoutMode: 'masonry' });
+                }
               }
-              conatiner.append(joinus);
-              $('.member-list').append(conatiner);
-              if(insertTo !== 0){
-                conatiner.isotope({ layoutMode: 'masonry' });
+            });
+            var c1 = $('<aside></aside>').addClass('col-lg-12');
+            while(memberArr.length){
+              c1.append( memberArr.pop().removeAttr('class').addClass('col-lg-2 col-md-2'));
+            }
+            if(leaders.length % 2 === 0){
+              c1.append(joinus.removeAttr('class').addClass('joinus col-lg-2 col-md-2'));
+            }
+            $('.member-list').removeClass('sm xs').addClass('lg');
+            $('.member-list').append(c1);
+
+          }else if($(window).width() < 1170 && $(window).width() >= 768 ){
+            if($('.member-list').hasClass('sm')){
+              return ;
+            }
+            $('.member-list >*').remove();
+            $.each(leaders, function(i, leader){
+                var square = $('<aside></aside>').addClass('col-sm-6');
+                var total = 5;
+                var indexOfLeader = Math.floor(Math.random() * 2) * 2 + 1;
+                while(total){
+                  if(indexOfLeader === total){
+                    square.append($(leader).clone().removeAttr('class').addClass('leaders col-sm-12'));
+                  }else{
+                    square.append($(memberArr.pop()).clone().removeAttr('class').addClass('col-sm-6'));
+                  }
+                  total--;
+                }
+                $('.member-list').append(square);
+            });
+            var c2 = $('<aside></aside>').addClass('col-sm-12');
+            while(memberArr.length){
+              c2.append( memberArr.pop().removeAttr('class').addClass('col-sm-3'));
+            }
+            c2.append(joinus.removeAttr('class').addClass('joinus col-sm-3'));
+            $('.member-list').removeClass('lg xs').addClass('sm');
+            $('.member-list').append(c2);
+          }
+          // JavaScript to be fired on the home page, after the init JS
+          $('.member-list a').on('click', function(ev){
+            var o = this;
+            var info = $(o).parents('li');
+
+            $('li.flip').not(info).removeClass('flip');
+            var classes = [];
+            classes.push('flip');
+            if(!info.hasClass('flip')){
+              if(!info.hasClass('leaders')){
+                info.removeClass('right');
+                info.removeClass('left');
+                info.removeClass('bottom');
+                info.removeClass('top');
+                if(ev.clientX > $(window).width() / 2){
+                  classes.push('right');
+                }else{
+                  classes.push('left');
+                }
+                var isTopRow = Math.round(Math.abs($(o).offset().top - $('.member-list').offset().top)) === 3;
+                var isBottomRow = 
+                  Math.round(Math.abs($(o).offset().top - $('.member-list').offset().top)) === 
+                    $('.member-list').outerHeight() - $(o).outerHeight() - 3;
+                if(isTopRow){
+                  classes.push('top');
+                }
+                else if(isBottomRow){
+                  classes.push('bottom');
+                }
+                else if(ev.clientY > $(window).height() / 2){
+                  classes.push('bottom');
+                }else{
+                  classes.push('top');
+                }
+              }
+              for(var i in classes){
+                info.addClass(classes[i]);
               }
             }else{
-              var square = $('<aside></aside>').addClass('col-lg-6');
-              var total = 6;
-              var indexOfLeader = Math.floor(Math.random() * 5 + 2);
-              while(total){
-                if(indexOfLeader === total){
-                  square.append($(leader).clone().removeClass('col-lg-4').addClass('col-lg-8'));
-                }else{
-                  square.append($(memberArr.pop()).clone().removeClass('col-lg-2').addClass('col-lg-4'));
-                }
-                total--;
-              }
-              $('.member-list').append(square);
-              if(indexOfLeader < 6){
-                square.isotope({ layoutMode: 'masonry' });
-              }
+              info.removeClass('flip');
             }
           });
-          conatiner = $('<aside></aside>').addClass('col-lg-12');
-          while(memberArr.length){
-            conatiner.append( memberArr.pop());
-          }
-          if(leaders.length % 2 === 0){
-            conatiner.append(joinus);
-          }
-          $('.member-list').append(conatiner);
-
         }
-        // JavaScript to be fired on the home page, after the init JS
-        $('.member-list a').on('click', function(ev){
-          var o = this;
-          var info = $(o).parents('li');
+        renderList();
 
-          $('li.flip').not(info).removeClass('flip');
-          var classes = [];
-          classes.push('flip');
-          if(!info.hasClass('flip')){
-            if(!info.hasClass('leaders')){
-              info.removeClass('right');
-              info.removeClass('left');
-              info.removeClass('bottom');
-              info.removeClass('top');
-              if(ev.clientX > $(window).width() / 2){
-                classes.push('right');
-              }else{
-                classes.push('left');
-              }
-              var isTopRow = Math.round(Math.abs($(o).offset().top - $('.member-list').offset().top)) === 3;
-              var isBottomRow = 
-                Math.round(Math.abs($(o).offset().top - $('.member-list').offset().top)) === 
-                  $('.member-list').outerHeight() - $(o).outerHeight() - 3;
-              if(isTopRow){
-                classes.push('top');
-              }
-              else if(isBottomRow){
-                classes.push('bottom');
-              }
-              else if(ev.clientY > $(window).height() / 2){
-                classes.push('bottom');
-              }else{
-                classes.push('top');
-              }
-            }
-            for(var i in classes){
-              info.addClass(classes[i]);
-            }
+        $('.taxonomy').on('click', function(){
+          if($(window).width() < 1170){
+            $(this).toggleClass('on');
           }else{
-            info.removeClass('flip');
+            $(this).removeClass('on');
           }
         });
+        $(window).on('resize', renderList);
       }
     },
     'archive': {
