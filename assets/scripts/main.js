@@ -336,6 +336,47 @@
           return false;
         });
       }
+    },
+    'contact': {
+      init: function() {
+        // JavaScript to be fired on the home page
+      },
+      finalize: function() {
+        $('.taxonomy').on('click', function(){
+          if($(window).width() < 1170){
+            $(this).toggleClass('on');
+          }else{
+            $(this).removeClass('on');
+          }
+        });
+        $('.jobs-container').slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          speed: 750,
+          fade: true,
+          cssEase: 'linear',
+          arrows: true
+        });
+        $('#qa .panel-heading').unbind('click').on('click', function(){
+          var collapsed = $('a', this).hasClass('collapsed');
+          var collapse = $(this).parents('.panel').find('.panel-collapse');
+          var h = collapse.find('.panel-body').outerHeight();
+          var panel = $(this).parents('.panel');
+          
+          if(collapsed){
+            $('a', this).removeClass('collapsed');
+            collapse.height(h);
+            panel.siblings().find('.panel-collapse').height(0);
+            panel.siblings().find('a').addClass('collapsed');
+          }else{
+            $('a', this).addClass('collapsed');
+            collapse.height(0);
+          }
+
+        }).first().trigger('click');  
+      }
     }
   };
 
