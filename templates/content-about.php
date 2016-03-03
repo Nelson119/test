@@ -14,23 +14,23 @@
 <section class="container">
 	<section class="row">
 		<article>
-			<section class="col-lg-6 col-md-12 col-sm-12                                                                                                                                                                                            p-right">
+			<section class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-right">
 				<h3>What’s TED?</h3>
 				<p>TED 是一個跨界的智庫，是一個對話的平台，更是實現 ideas 的舞台。TED 分別代表的是科技 (technology)、娛樂 (entertainment)、設計 (design)，是一年一度的創新盛會。1984 年由 Richard Wurman 在加州創立,原本只是一群朋友間的腦力大激盪，他們來自不同的領域，他們有些是建築師、科學家、教育家、詩人、劇作家、創業家、設計師等等。他們對未來充滿熱情，又有一些叛逆，聚在一起討論最新最酷的點子，和如何可以改變這個世界。</p>
 			</section>
-			<section class="col-lg-6 col-md-12 col-sm-12 pull-right">
+			<section class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pull-right">
 				<figure><a href="javascript:"><img src="<?php theme_asset('images/about/video-preview-1.png')?>"></a></figure>
 				<hr class="hidden-lg hidden-md">
 			</section>
-			<section class="col-lg-6 col-md-12 col-sm-12 ">
+			<section class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 				<h3 class="tedx">What’s TEDx?</h3>
 				<p>只要是認同TED理念的人，都可以向美國大會申請執照，於社區、大學、城市等等區域建立TEDx組織。</p>
 			</section>
-			<hr class="col-lg-12 col-md-12 hidden-sm"/>
-			<section class="col-lg-6 col-md-12 col-sm-12 ">
+			<hr class="col-lg-12 col-md-12 hidden-sm hidden-xs"/>
+			<section class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 				<figure><a href="javascript:"><img src="<?php theme_asset('images/about/video-preview-2.png')?>"></a></figure>
 			</section>	
-			<section class="col-lg-6 col-md-12 col-sm-12  p-left hidden-sm hidden-xs">
+			<section class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-left hidden-sm hidden-xs">
 				<h2>What’s TEDxChungChengU?</h2>
 				<p>嘉義是位於台灣較南端的田園城市，大多數的學生來自不同的角落，學校開啟了一扇門，帶給我們專業的知識領域，卻忘記告訴我們，這片土地其實擁有了很多值得我們去探討的價值與意義。</p>
 
@@ -41,7 +41,7 @@
 				<p>這些不為人知的人文風情，透過重新詮釋，化為平易近人的語言，TEDX中正的出現，希望可以帶給對於嘉義不了解的異客，不再把嘉義當成異鄉。</p>
 			</section>
 			<hr/>
-			<section class="col-lg-12">
+			<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<h2>TEDxChungChengU 團隊</h2>
 				<ul class="member-list row">
 					<li class="col-lg-2">

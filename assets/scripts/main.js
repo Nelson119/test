@@ -139,6 +139,13 @@
         }, function(){
           $(this).next().removeClass('hint');
         });
+
+        $('.social .search').on('click', function(){
+          $('.search-input').addClass('on');
+        });
+        $('.close-search').on('click', function(){
+          $('.search-input').removeClass('on');
+        });
         // JavaScript to be fired on the home page, after the init JS
       }
     },
@@ -166,7 +173,6 @@
           members.each(function(i, member){
             memberArr.push($(member).clone());
           });
-          console.log(memberArr);
           if($(window).width() >= 1170 ){
             if($('.member-list').hasClass('lg')){
               return ;
@@ -247,21 +253,63 @@
             c2.append(joinus.removeAttr('class').addClass('joinus col-sm-3'));
             $('.member-list').removeClass('lg xs').addClass('sm');
             $('.member-list').append(c2);
+          }else if($(window).width() < 768 ){
+
+            if($('.member-list').hasClass('xs')){
+              return ;
+            }
+            $('.member-list >*').remove();
+            var c3 = $('<aside></aside>').addClass('col-xs-12');
+            var total = leaders.length + memberArr.length;
+            var leaderIndexes = [];
+            var currentLeader = 0;
+            while(total){
+              var rand = Math.floor(Math.random() * 1000)  > 500;
+              if(rand && leaders.length > currentLeader){
+                var leader = leaders[currentLeader];
+                c3.append($(leader).clone().removeAttr('class').addClass('leaders col-xs-12'));
+                currentLeader++;
+              }else if(memberArr.length == 1 && leaders.length > currentLeader + 1){
+                var leader = leaders[currentLeader];
+                c3.append($(leader).clone().removeAttr('class').addClass('leaders col-xs-12'));
+                currentLeader++;
+              }else{
+                var member1 = memberArr.pop();
+                var member2 = memberArr.pop();
+                if(member1){
+                  c3.append($(member1).clone().removeAttr('class').addClass('col-xs-6'));
+                }
+                if(member2){
+                  c3.append($(member2).clone().removeAttr('class').addClass('col-xs-6'));
+                }
+              }
+              total--;
+            }
+            $('.member-list').append(c3);
+            while(memberArr.length){
+              c3.append( memberArr.pop().removeAttr('class').addClass('col-sm-3'));
+            }
+            c3.append(joinus.removeAttr('class').addClass('joinus col-xs-6'));
+            $('.member-list').removeClass('lg sm').addClass('xs');
+            $('.member-list').append(c3);
+
           }
-          // JavaScript to be fired on the home page, after the init JS
           $('.member-list a').on('click', function(ev){
             var o = this;
             var info = $(o).parents('li');
 
-            $('li.flip').not(info).removeClass('flip');
+            $('li.flip').not(info).removeClass('flip')
+            setTimeout(function(){
+              $('li.flip').not(info).removeClass('right')
+                .removeClass('left')
+                .removeClass('bottom')
+                .removeClass('top');
+            }, 450);
+
             var classes = [];
             classes.push('flip');
             if(!info.hasClass('flip')){
               if(!info.hasClass('leaders')){
-                info.removeClass('right');
-                info.removeClass('left');
-                info.removeClass('bottom');
-                info.removeClass('top');
                 if(ev.clientX > $(window).width() / 2){
                   classes.push('right');
                 }else{
@@ -287,7 +335,13 @@
                 info.addClass(classes[i]);
               }
             }else{
-              info.removeClass('flip');
+              info.removeClass('flip')
+              setTimeout(function(){
+                info.removeClass('right')
+                  .removeClass('left')
+                  .removeClass('bottom')
+                  .removeClass('top');
+              }, 450);
             }
           });
         }

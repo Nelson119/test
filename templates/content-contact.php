@@ -79,13 +79,13 @@
 
 	<section class="recruit">
 		<ul class="row two-col">
-			<li class="col-lg-6 col-md-6 col-sm-6 col-sm-12">
+			<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<figure class="nojob">
 					<figcaption>固定招募<span>REGULAR RECRUITMENT</span></figcaption>
 					<h5>敬請期待春季及秋季人才招募</h5>
 				</figure>
 			</li>
-			<li class="col-lg-6 col-md-6 col-sm-6 col-sm-12">
+			<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<figure class="jobs">
 					<figcaption>長期招募<span>LONG TERM RECRUITING</span></figcaption>
 					<ul class="jobs-container">

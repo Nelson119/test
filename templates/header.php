@@ -94,5 +94,21 @@
         ?>
       </nav>
     </section>
+    <aside class="search-input collapsing">
+      <svg viewBox="0 0 20 20">
+        <path d="M19.4,17.8l-4-4c1.1-1.4,1.8-3.3,1.8-5.2c0-4.7-3.8-8.5-8.5-8.5S0.3,3.9,0.3,8.6
+          s3.8,8.5,8.5,8.5c1.8,0,3.5-0.6,4.9-1.6l4.1,4.1c0.5,0.5,1.2,0.5,1.7,0C19.9,19.1,19.9,18.3,19.4,17.8z M13.2,12.7l-0.7,0.6
+          c-1,0.8-2.3,1.3-3.8,1.3c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6C14.7,10.2,14.1,11.6,13.2,12.7z"/>
+      </svg>
+      <form method="get" action=""> <input placeholder="輸入關鍵字" name="s"> </form>
+      <a class="close-search" href="javascript:">
+        <svg viewBox="0 0 15 15">
+          <rect x="-1.8" y="6.2" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 7.5 18.1066)" class="st0" width="18.6" height="2.7"/>
+
+          <rect x="-1.8" y="6.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.1066 7.5)" class="st0" width="18.6" height="2.7"/>
+        </svg>
+      </a>
+
+    </aside>
   </section>
 </header>

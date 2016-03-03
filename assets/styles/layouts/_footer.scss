@@ -83,15 +83,26 @@ footer{
 	  	@media screen and (max-width: 767px) {
 	  		display: none;
 	  		position: absolute;
-			width:55vw;
+			width:50vw;
 			letter-spacing: -1em;
 			line-height: 0;
 			margin:-50vw 0 0 0;
 			left:0;
 			top:0;
 			&.blur{
-				filter:url('data:image\/svg+xml;utf9,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"6\" \/><\/filter><\/svg>#blur');
-				-webkit-filter:blur(6px);
+				filter:url('data:image\/svg+xml;utf9,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"1\" \/><\/filter><\/svg>#blur');
+				-webkit-filter:blur(1px);
+				&:after{
+					position:absolute;
+					top:0;
+					left:0;
+					width:50vw;
+					height:100%;
+					content: '';
+					display: block;
+					background: rgba(0,0,0,0.4);
+					z-index: 1;
+				}
 			}
 			li{
 			    // display: inline-block;
