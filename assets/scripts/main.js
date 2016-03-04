@@ -21,9 +21,45 @@
         // JavaScript to be fired on all pages
 
         $('.burg').on('click', function(){
-          $(this).toggleClass('menu-opened');
-          $('.wrap.container,footer .social').toggleClass('blur');
+          if($(this).hasClass('menu-opened')){
+            $(this).removeClass('menu-opened');
+            $('.wrap.container,footer .social').removeClass('blur');
+          }else{
+            $(this).addClass('menu-opened');
+            $('.wrap.container,footer .social').addClass('blur');
+            $('.search-input').removeClass('on');
+          }
         });
+        $('.nav.search .search').on('click', function(){
+          $('.search-input').addClass('on');
+          $('.burg').removeClass('menu-opened');
+          $('.wrap.container,footer .social').addClass('blur');
+          $('.search-input input').trigger('focus').one('blur', function(){
+            $('.search-input').removeClass('on');
+            $('.wrap.container,footer .social').removeClass('blur');
+          });
+        });
+        $('.close-search').on('click', function(){
+          $('.search-input').removeClass('on');
+          $('.wrap.container,footer .social').removeClass('blur');
+        });
+
+        $(window).on('resize', function(){
+            if($(window).width() < 768){
+              if($('.burg').hasClass('menu-opened')){
+                $('.burg').removeClass('menu-opened');
+              }
+              if($('.wrap.container').hasClass('blur')){
+                $('.wrap.container').removeClass('blur');
+              }
+              if($('footer .social').hasClass('blur')){
+                $('footer .social').removeClass('blur');
+              }
+              if($('.search-input').hasClass('on')){
+                $('.search-input').removeClass('on');
+              }
+            }
+        }).trigger('resize');
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -72,7 +108,7 @@
           slidesToScroll: 1,
           // variableWidth: true,
           fade: true,
-          speed: 1250,
+          speed: 750,
           arrows: false
         });
 
@@ -140,12 +176,6 @@
           $(this).next().removeClass('hint');
         });
 
-        $('.social .search').on('click', function(){
-          $('.search-input').addClass('on');
-        });
-        $('.close-search').on('click', function(){
-          $('.search-input').removeClass('on');
-        });
         // JavaScript to be fired on the home page, after the init JS
       }
     },
@@ -474,6 +504,18 @@
           }
 
         }).first().trigger('click');  
+
+        $('#tab-tedx-in-taiwan ul').slick({
+          dots: true,
+          vertical: true,
+          infinite: true,
+          slidesToShow: 6,
+          slidesToScroll: 6,
+          speed: 1,
+          // fade: true,
+          cssEase: 'linear',
+          arrows: false
+        })
       }
     }
   };

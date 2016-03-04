@@ -90,7 +90,7 @@
 					</li>
 					<li class="col-lg-2 joinus">
 						<aside>
-							<a href="javascript:">
+							<a href="/contact">
 								<span>JOIN US NOW</span>								
 							</a>
 						</aside>

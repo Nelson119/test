@@ -37,8 +37,25 @@
 			<ul class="row">
 				<?php $i = 10?>
 				<?php while($i--):?>
-				<li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-					<a class="tedx" target="_blank" href="https://www.google.com/maps?q=60004 嘉義市鹿寮里學府路300號"><img src="<?php theme_asset('images/contact/tedx-taipei-american-school.png')?>"></a>
+				<li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<a class="tedx" target="_blank" href="javascript:">
+						<img src="<?php theme_asset('images/contact/tedx-taipei-american-school.png')?>">
+					</a>
+				</li>
+				<li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<a class="tedx" target="_blank" href="javascript:">
+						<img src="<?php theme_asset('images/contact/tedx-taitung.png')?>">
+					</a>
+				</li>
+				<li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<a class="tedx" target="_blank" href="javascript:">
+						<img src="<?php theme_asset('images/contact/tedx-taipei.png')?>">
+					</a>
+				</li>
+				<li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<a class="tedx" target="_blank" href="javascript:">
+						<img src="<?php theme_asset('images/contact/tedx-taipei-american-school.png')?>">
+					</a>
 				</li>
 				<?php endwhile?>
 			</ul>
@@ -58,17 +75,17 @@
 		</div>
 		<div id="tab-cooperation-partners" class="tab-pane fade">
 			<ul class="row">
-				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
 					<figure style="background-image: url(<?php theme_asset('images/contact/ccu.png')?>)">
 					</figure>
 					<p class="name">中正大學教學卓越計畫</p>
 				</li>
-				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
 					<figure style="background-image: url(<?php theme_asset('images/contact/housein.png')?>)">
 					</figure>
 					<p class="name">Livehouse</p>
 				</li>
-				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
 					<figure style="background-image: url(<?php theme_asset('images/contact/tedxccu.png')?>)">
 					</figure>
 					<p class="name">TEDxChungChengU策展團隊</p>

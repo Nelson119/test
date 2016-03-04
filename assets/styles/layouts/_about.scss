@@ -327,6 +327,7 @@ body.about{
 							display: inline-block;
 							content:' ';
 							vertical-align: middle;
+							width:1px;
 						}
 						span{
 							letter-spacing: 1px;
@@ -337,6 +338,7 @@ body.about{
 							font-weight: bold;
 							text-align: center;
 							padding:0 1.6em;
+							width: calc(100% - 2px);
 						}
 					}
 				}
@@ -393,8 +395,9 @@ body.about{
 									height: 100%;
 									top:0;
 									left:0;
-									background: rgba(0,0,0,0.5) ;
+									background: rgba(0,0,0,0.05) ;
 									content: '';
+									transition-duration:0.2s;
 								}
 								&:after{
 									position: absolute;
@@ -408,6 +411,9 @@ body.about{
 									transition-duration:0.2s;
 								}
 								&:hover{
+									&:before{
+										background: rgba(0,0,0,0.5) ;
+									}
 									&:after{
 										opacity: 0.85;
 									}

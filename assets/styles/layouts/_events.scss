@@ -431,6 +431,7 @@
 				width: vw320(300) !important;
 				margin:0 auto;
 				padding:0;
+			    z-index: 1;
 				&:before{
 				    display: none;
 				}
@@ -625,6 +626,9 @@
 		}
 		.container{
 			width: vw768(720);
+			&.fit{
+				width: 100%;
+			}
 			.cd-timeline-img{
 				left: 50%;
     			top: vw768(111);

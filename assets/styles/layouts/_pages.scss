@@ -3,6 +3,7 @@
 	padding:0 40px;
 }
 .wrap.container{
+	overflow: hidden;
 	&.blur{
 		position: relative;
 		&:after{

@@ -174,6 +174,82 @@ body.contact{
 			}
 		}
 	}
+	#tab-tedx-in-taiwan{
+		ul{
+			padding-bottom:30px;
+			margin-bottom:0;
+		}
+		.slick-track,.slick-list{
+  			@media screen and (min-width: 768px) {
+				height: auto!important;
+				top:auto!important;
+				left: auto!important;
+			}
+		}
+		li.slick-slide{
+			width: 100%!important;
+			margin: vw320(15) 0;
+			height: 20px;
+			left:0!important;
+			transition-duration:0.25s;
+			opacity: 0;
+			@media (min-width: 768px) and (max-width: 1170px) {
+				height: 27px;
+				margin: 15px 0;
+				opacity: 1 !important;
+				width: 50% !important;
+				&.slick-cloned{
+					display: none;
+				}
+			}
+  			@media screen and (min-width: 1170px) {
+				height: 27px;
+				margin: 15px 0;
+				opacity: 1 !important;
+				width: 33.3333% !important;
+				&.slick-cloned{
+					display: none;
+				}
+			}
+			&.slick-active{
+				opacity: 1!important;
+			}
+			a{
+				height: 100%;
+				max-width: 100%;
+			}
+			img{
+				height: 100%;
+				max-width: 100%;
+			}
+		}
+		.slick-dots{
+			background: none;
+			bottom: vw320(-20);
+			@media (min-width: 768px) and (max-width: 1170px) {
+				bottom: vw768(-20);
+			}
+  			@media screen and (min-width: 768px) {
+				display: none!important;
+			}
+			li{
+				display: inline-block;
+				padding:0 5px;
+				background-color: $main-red;
+				opacity: 0.5;
+				width: 10px!important;
+				height: 10px;
+				border-radius: 50%;
+				transition-duration:0.25s;
+				&.slick-active{
+					opacity: 1;
+				}
+				button{
+					display: none;
+				}
+			}
+		}
+	}
 	.recruit{
 		margin-bottom:80px;
 		.row{
@@ -206,8 +282,8 @@ body.contact{
 				border-style:solid;
 				content:'';
 				position: absolute;
-				top:0;
-				right:0;
+				top:-1px;
+				right:-1px;
 			}
 			&:before{
 				height:100%;
@@ -699,14 +775,18 @@ body.contact{
 				}
 			}
 		}
+		// #tab-tedx-in-taiwan{
+		// 	height:vw320(345);
+		// }
 		#tab-cooperation-partners ul{
 			padding-top:15px;
 			padding-bottom:15px;
 			li{
 				padding: 0 vw320(10);
+				height: vw320(200);
 				figure{
-					width: vw320(75);
-					height: vw320(75);
+					width: vw320(140);
+					height: vw320(140);
 				}
 			}
 		}
@@ -758,6 +838,8 @@ body.contact{
 				figure.nojob{
 					background-color: #404040;
 					background-image: url(../images/contact/recruit.png);
+					background-position: 0 300%;
+					background-size: 100% auto;
 				}
 				figure.jobs{
 					height: vw320(380);
@@ -792,6 +874,14 @@ body.contact{
 				font-size: vw320(14);
 				.panel-title,.panel-body{
 					padding:15px 0;
+				}
+				.panel-title{
+					a{
+					    padding-right: 1em;
+					    svg{
+							right: 0;
+						}
+					}
 				}
 			}
 		}
@@ -1023,13 +1113,27 @@ body.contact{
 					max-width: 100%;
 				}
 			}
-			#tab-cooperation-partners ul{
-				
-				li{
-					padding:0 vw768(40);
-					.name{
-						width: vw768(145);
-					}
+		}
+		#tab-cooperation-partners ul{
+			
+			li{
+				padding:0 vw768(30);
+				// .name{
+				// 	width: vw768(295);
+				// 	max-width: 100%;
+				// 	padding: vw768(20) 0;
+				// }
+				// figure{
+				// 	width: vw768(295);
+				// 	height: vw768(295);
+				// }
+
+			}
+		}
+		#tab-tedx-in-taiwan{
+			li{
+				img{
+					margin: vw768(15) 0;
 				}
 			}
 		}
