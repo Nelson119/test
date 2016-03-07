@@ -1,4 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
+<?php setPostViews(get_the_id());?>
   <article <?php post_class(); ?>>
     <figure class="kv columns">
       <ul>

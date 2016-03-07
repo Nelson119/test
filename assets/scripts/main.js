@@ -43,6 +43,13 @@
           $('.search-input').removeClass('on');
           $('.wrap.container,footer .social').removeClass('blur');
         });
+        $('.taxonomy').on('click', function(){
+          if($(window).width() < 1170){
+            $(this).toggleClass('on');
+          }else{
+            $(this).removeClass('on');
+          }
+        });
 
         $(window).on('resize', function(){
             if($(window).width() < 768){
@@ -299,7 +306,7 @@
                 var leader = leaders[currentLeader];
                 c3.append($(leader).clone().removeAttr('class').addClass('leaders col-xs-12'));
                 currentLeader++;
-              }else if(memberArr.length == 1 && leaders.length > currentLeader + 1){
+              }else if(memberArr.length === 1 && leaders.length > currentLeader + 1){
                 var leader = leaders[currentLeader];
                 c3.append($(leader).clone().removeAttr('class').addClass('leaders col-xs-12'));
                 currentLeader++;
@@ -328,7 +335,7 @@
             var o = this;
             var info = $(o).parents('li');
 
-            $('li.flip').not(info).removeClass('flip')
+            $('li.flip').not(info).removeClass('flip');
             setTimeout(function(){
               $('li.flip').not(info).removeClass('right')
                 .removeClass('left')
@@ -365,7 +372,7 @@
                 info.addClass(classes[i]);
               }
             }else{
-              info.removeClass('flip')
+              info.removeClass('flip');
               setTimeout(function(){
                 info.removeClass('right')
                   .removeClass('left')
@@ -377,13 +384,6 @@
         }
         renderList();
 
-        $('.taxonomy').on('click', function(){
-          if($(window).width() < 1170){
-            $(this).toggleClass('on');
-          }else{
-            $(this).removeClass('on');
-          }
-        });
         $(window).on('resize', renderList);
       }
     },
@@ -397,13 +397,6 @@
         // });
         $('.kv .background ul').slick({ dots: false, arrows: false, fade:true, speed: 800 });
         $('.kv nav ul').slick({ asNavFor: '.kv .background ul', dots: true, fade:true, speed: 800 });
-        $('.taxonomy').on('click', function(){
-          if($(window).width() < 1170){
-            $(this).toggleClass('on');
-          }else{
-            $(this).removeClass('on');
-          }
-        });
         $('.more a').on('click', function(){
           $('.hide').first().addClass('fade in').removeClass('hide');
         });
@@ -470,13 +463,6 @@
         // JavaScript to be fired on the home page
       },
       finalize: function() {
-        $('.taxonomy').on('click', function(){
-          if($(window).width() < 1170){
-            $(this).toggleClass('on');
-          }else{
-            $(this).removeClass('on');
-          }
-        });
         $('.jobs-container').slick({
           dots: true,
           infinite: true,
@@ -515,7 +501,7 @@
           // fade: true,
           cssEase: 'linear',
           arrows: false
-        })
+        });
       }
     }
   };
