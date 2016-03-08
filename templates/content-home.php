@@ -4,7 +4,7 @@
 	<figure style="background-image:url(<?php theme_asset('images/home/slide-960x993.png')?>)">
 		<a href="javascript:">
 			<article class="text-left">
-				<h3>飄，植茁</h3>
+				<h3>飄，植茁1</h3>
 				<h4>是蒲公英的生命週期，更象徵著更象徵著每個為夢執著的你1</h4>
 				<p class="hidden-xs hidden-sm">美麗的大地滋養了多少甜美的作物，美麗的大地滋養了多少甜美的作物，餐桌前的我們是否有想過食物的來源，甚至是...</p>
 				<i class="fa fa-plus"></i>
@@ -14,7 +14,7 @@
 	<figure style="background-image:url(<?php theme_asset('images/home/banner1.png')?>)">
 		<a href="javascript:">
 			<article class="text-left">
-				<h3>飄，植茁</h3>
+				<h3>飄，植茁2</h3>
 				<h4>是蒲公英的生命週期，更象徵著更象徵著每個為夢執著的你2</h4>
 				<p class="hidden-xs hidden-sm">美麗的大地滋養了多少甜美的作物，美麗的大地滋養了多少甜美的作物，餐桌前的我們是否有想過食物的來源，甚至是...</p>
 				<i class="fa fa-plus"></i>
@@ -24,7 +24,7 @@
 	<figure style="background-image:url(<?php theme_asset('images/home/banner2.png')?>)">
 		<a href="javascript:">
 			<article class="text-left">
-				<h3>飄，植茁</h3>
+				<h3>飄，植茁3</h3>
 				<h4>是蒲公英的生命週期，更象徵著更象徵著每個為夢執著的你3</h4>
 				<p class="hidden-xs hidden-sm">美麗的大地滋養了多少甜美的作物，美麗的大地滋養了多少甜美的作物，餐桌前的我們是否有想過食物的來源，甚至是...</p>
 				<i class="fa fa-plus"></i>

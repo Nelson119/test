@@ -23,13 +23,13 @@
 		<section class="detail">
 			<aside class="normal">
 				<span class="category">
-					<?php foreach($terms as $tag):?>
+					<?php foreach($terms as $term):?>
 					<svg viewBox="0 0 13 13">
 						<path d="M0,2.3L0,5c0,0.6,0.4,1.5,0.8,2l4.5,4.5C5.8,12,6.5,12,7,11.5l3.4-3.4c0.4-0.4,0.4-1.2,0-1.6
 						L5.8,2c-0.4-0.4-1.3-0.8-2-0.8H1.2C0.5,1.2,0,1.7,0,2.3z M1.5,3.9c0-0.6,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2C3.9,4.5,3.3,5,2.7,5
 						S1.5,4.5,1.5,3.9z M12.1,7L6.2,1.2c0.6,0,1.5,0.4,2,0.8l4.5,4.5c0.4,0.4,0.4,1.2,0,1.6l-3.4,3.4c-0.4,0.4-0.9,0.4-1.4,0.2l4.1-4.1
 						C12.2,7.4,12.2,7.2,12.1,7z"/>
-					</svg><?php echo $tag->name?>
+					</svg><?php echo $term->name?>
 					<?php endforeach;?>
 				</span>
 				<h3 class="entry-title"><?php the_title(); ?></h3>

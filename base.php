@@ -43,6 +43,11 @@ use Roots\Sage\Wrapper;
       // e.src='https://www.google-analytics.com/analytics.js';
       // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       // ga('create','UA-72716951-1');ga('send','pageview');
+      var headJS = {};
+      headJS.ajaxurl = '<?php echo admin_url( 'admin-ajax.php' )?>';
+      headJS.templateurl = '<?php echo get_template_directory_uri()?>';
+      headJS.posts_per_page = '<?php echo get_option('posts_per_page') ?>';
+      window.headJS = headJS
     </script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {

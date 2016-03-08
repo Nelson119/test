@@ -17,20 +17,7 @@
 </nav>
 <section class="container">
 	<section class="row">
-		<?php while (have_posts()) : the_post(); ?>
-			<aside class="nopadding col-lg-12 col-md-12 col-sm-6 col-xs-12">
-				<?php get_template_part('templates/content', 'search'); ?>
-			</aside>
-			<aside class="nopadding col-lg-12 col-md-12 col-sm-6 col-xs-12">
-				<?php get_template_part('templates/content', 'search'); ?>
-			</aside>
-			<aside class="nopadding col-lg-12 col-md-12 col-sm-6 col-xs-12">
-				<?php get_template_part('templates/content', 'search'); ?>
-			</aside>
-			<aside class="nopadding col-lg-12 col-md-12 col-sm-6 col-xs-12">
-				<?php get_template_part('templates/content', 'search'); ?>
-			</aside>
-		<?php endwhile; ?>
+		<?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="videos, columns, events" search="'.get_search_query().'" posts_per_page="8" pause="true" scroll="false" transition_container="false" images_loaded="true" button_label="更多結果" button_loading_label="載入中…" container_type="ul" css_classes="list-container row"]');?>
 	</section>
 	<aside class="more">
 		<a href="javascript:">

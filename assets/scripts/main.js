@@ -112,6 +112,8 @@
           dots: true,
           infinite: true,
           slidesToShow: 1,
+          autoplay: true,
+          autoplaySpeed: 4750,
           slidesToScroll: 1,
           // variableWidth: true,
           fade: true,
@@ -149,6 +151,8 @@
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4250,
           speed: 750,
           fade: true,
           cssEase: 'linear',
@@ -162,6 +166,7 @@
           slidesToScroll: 1,
           autoplay: true,
           speed: 750,
+          autoplaySpeed: 3750,
           fade: true,
           cssEase: 'linear',
           arrows: false
@@ -397,9 +402,7 @@
         // });
         $('.kv .background ul').slick({ dots: false, arrows: false, fade:true, speed: 800 });
         $('.kv nav ul').slick({ asNavFor: '.kv .background ul', dots: true, fade:true, speed: 800 });
-        $('.more a').on('click', function(){
-          $('.hide').first().addClass('fade in').removeClass('hide');
-        });
+
       }
     },
     'single': {
